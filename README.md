@@ -34,5 +34,3 @@ in other one, execute the ds-client:
 ```bash
 ./ds-client -n -p 50000 -a bf
 ```
-
-alksdbfblk
