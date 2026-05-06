@@ -33,7 +33,6 @@ def send(message: str):
 send("HELO")
 receive()
 
-<<<<<<< HEAD
 send("AUTH chicken")  # Replace myName with your name/team name
 receive()
 
@@ -42,16 +41,3 @@ receive()
 
 
 sock.close()
-=======
-send("AUTH chicken")
-receive()
-
-send("READY")
-message = receive()
-
-if message == "NONE":
-        send("QUIT")
-        receive()
-
-sock.close()
->>>>>>> 95d7fb5 (Co-authored-by: Tanvir <TanvirS-07@users.noreply.github.com>)
