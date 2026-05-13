@@ -9,20 +9,12 @@ sock.settimeout(10)
 sock.connect(("localhost", PORT))
 
 def receive() -> str:
-    data = b""
-    
-    while True:
-        try:
-            part = sock.recv(BUF_SIZE)
-        except (TimeoutError, socket.timeout):
-            break
-            data += part
-            if len(part) < BUF_SIZE: # Check if reached end of message
-                break
-            
-    message = data.decode().strip()
+    data = sock.recv(BUF_SIZE)
+    message = data.decode("utf-8").strip()
+
     if VERBOSE:
         print("Received:", message)
+
     return message
 
 def send(message: str):
