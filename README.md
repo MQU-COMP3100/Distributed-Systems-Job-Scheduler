@@ -36,6 +36,3 @@ in other one, execute the ds-client:
 ```
 
 
-Hello
-
-hi
