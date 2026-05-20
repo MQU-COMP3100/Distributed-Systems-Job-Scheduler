@@ -80,7 +80,7 @@ def get_servers(client, query, cores, memory, disk):
     return servers
 
 
-def choose_server(servers, specs, job):
+def choose_server(servers, specs):
     def spec(s, key, fb): return specs.get(s["type"], {}).get(key, fb)
     def full_cores(s): return spec(s, "cores", s["avail_cores"])
 
@@ -124,7 +124,7 @@ def main():
                 servers = get_servers(client, "Capable", job["cores"], job["memory"], job["disk"])
                 server = servers[0]
             else:
-                server = choose_server(servers, specs, job)
+                server = choose_server(servers, specs)
 
             client.send(f"SCHD {job['id']} {server['type']} {server['id']}")
             client.receive()
