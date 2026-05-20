@@ -7,7 +7,12 @@ import xml.etree.ElementTree as ET
 HOST = "localhost"
 PORT = 50000
 AUTH_NAME = "chicken"
-
+SPEC_LOAD_RETRIES = 20
+SPEC_LOAD_DELAY = 0.1
+DEFAULT_SERVER_LIMIT = 1
+DEFAULT_BOOT_TIME = 60
+DEFAULT_HOURLY_RATE = 1.0
+DEFAULT_RESOURCE = 1
 
 class DSClient:
     def __init__(self):
@@ -30,21 +35,21 @@ class DSClient:
 
 
 def load_specs():
-    for _ in range(20):
+    for _ in range(SPEC_LOAD_RETRIES):
         if os.path.exists("ds-system.xml"):
             root = ET.parse("ds-system.xml").getroot()
             specs = {}
-            for s in root.findall(".//server"):
-                specs[s.attrib["type"]] = {
-                    "limit": int(s.attrib.get("limit", 1)),
-                    "boot": int(s.attrib.get("bootupTime", 60)),
-                    "rate": float(s.attrib.get("hourlyRate", 1.0)),
-                    "cores": int(s.attrib.get("cores", 1)),
-                    "memory": int(s.attrib.get("memory", 1)),
-                    "disk": int(s.attrib.get("disk", 1)),
+            for server in root.findall(".//server"):
+                specs[server.attrib["type"]] = {
+                    "limit": int(server.attrib.get("limit", DEFAULT_SERVER_LIMIT)),
+                    "boot": int(server.attrib.get("bootupTime", DEFAULT_BOOT_TIME)),
+                    "rate": float(server.attrib.get("hourlyRate", DEFAULT_HOURLY_RATE)),
+                    "cores": int(server.attrib.get("cores", DEFAULT_RESOURCE)),
+                    "memory": int(server.attrib.get("memory", DEFAULT_RESOURCE)),
+                    "disk": int(server.attrib.get("disk", DEFAULT_RESOURCE)),
                 }
             return specs
-        time.sleep(0.1)
+        time.sleep(SPEC_LOAD_DELAY)
     return {}
 
 
