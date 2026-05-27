@@ -1,0 +1,2027 @@
+# ds-sim server 2-Apr, 2026 @ MQ
+# Server-side simulator started with './ds-server -n -c configs/stage2/s2-config05.xml -v brief'
+# Waiting for connection to port 50000 of IP address 127.0.0.1
+RCVD HELO
+SENT OK
+RCVD AUTH chicken
+# Welcome  chicken!
+# The system information can be read from 'ds-system.xml'
+SENT OK
+RCVD REDY
+t 19: job 0 -- CPU: 7, Mem: 2000, Disk: 1400, Est Runtime: 4 SUBMITTED
+      SENT JOBN 0 19 7 2000 1400 4
+      RCVD SCHD 0 large 0
+      job 0 (waiting) on large 0 (booting) SCHEDULED
+      SENT OK
+      RCVD REDY
+t 38: job 1 -- CPU: 2, Mem: 900, Disk: 200, Est Runtime: 13 SUBMITTED
+      SENT JOBN 1 38 2 900 200 13
+      RCVD SCHD 1 small 0
+      job 1 (waiting) on small 0 (booting) SCHEDULED
+      SENT OK
+      RCVD REDY
+t 75: job 2 -- CPU: 2, Mem: 1900, Disk: 2700, Est Runtime: 36 SUBMITTED
+      SENT JOBN 2 75 2 1900 2700 36
+      RCVD SCHD 2 medium 0
+      job 2 (waiting) on medium 0 (booting) SCHEDULED
+      SENT OK
+      RCVD REDY
+t 98: job 1 on small 0 RUNNING
+t 99: job 0 on large 0 RUNNING
+t 107: job 1 on small 0 COMPLETED
+       SENT JCPL 107 1 small 0
+       RCVD REDY
+t 116: job 3 -- CPU: 14, Mem: 9600, Disk: 13100, Est Runtime: 1493 SUBMITTED
+       SENT JOBN 3 116 14 9600 13100 1493
+       RCVD SCHD 3 xlarge 0
+       job 3 (waiting) on xlarge 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 117: job 4 -- CPU: 2, Mem: 1100, Disk: 3200, Est Runtime: 15 SUBMITTED
+       SENT JOBN 4 117 2 1100 3200 15
+       RCVD SCHD 4 small 0
+       job 4 (running) on small 0 (active) SCHEDULED
+       job 4 on small 0 RUNNING
+       SENT OK
+       RCVD REDY
+t 129: job 4 on small 0 COMPLETED
+       SENT JCPL 129 4 small 0
+       RCVD REDY
+t 135: job 2 on medium 0 RUNNING
+       job 5 -- CPU: 7, Mem: 4600, Disk: 11500, Est Runtime: 213 SUBMITTED
+       SENT JOBN 5 135 7 4600 11500 213
+       RCVD SCHD 5 2xlarge 0
+       job 5 (waiting) on 2xlarge 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 136: job 0 on large 0 COMPLETED
+       SENT JCPL 136 0 large 0
+       RCVD REDY
+t 147: job 6 -- CPU: 4, Mem: 4000, Disk: 4000, Est Runtime: 417 SUBMITTED
+       SENT JOBN 6 147 4 4000 4000 417
+       RCVD SCHD 6 large 0
+       job 6 (running) on large 0 (active) SCHEDULED
+       job 6 on large 0 RUNNING
+       SENT OK
+       RCVD REDY
+t 149: job 7 -- CPU: 8, Mem: 3200, Disk: 7700, Est Runtime: 747 SUBMITTED
+       SENT JOBN 7 149 8 3200 7700 747
+       RCVD SCHD 7 4xlarge 0
+       job 7 (waiting) on 4xlarge 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+       job 8 -- CPU: 12, Mem: 22800, Disk: 35200, Est Runtime: 43 SUBMITTED
+       SENT JOBN 8 149 12 22800 35200 43
+       RCVD SCHD 8 8xlarge 0
+       job 8 (waiting) on 8xlarge 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 160: job 9 -- CPU: 44, Mem: 139800, Disk: 207600, Est Runtime: 916 SUBMITTED
+       SENT JOBN 9 160 44 139800 207600 916
+       RCVD SCHD 9 16xlarge 0
+       job 9 (waiting) on 16xlarge 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 161: job 10 -- CPU: 4, Mem: 3500, Disk: 4400, Est Runtime: 22 SUBMITTED
+       SENT JOBN 10 161 4 3500 4400 22
+       RCVD SCHD 10 large 0
+       job 10 (running) on large 0 (active) SCHEDULED
+       job 10 on large 0 RUNNING
+       SENT OK
+       RCVD REDY
+       job 11 -- CPU: 12, Mem: 3900, Disk: 13100, Est Runtime: 1053 SUBMITTED
+       SENT JOBN 11 161 12 3900 13100 1053
+       RCVD SCHD 11 xlarge 0
+       job 11 (waiting) on xlarge 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 164: job 12 -- CPU: 4, Mem: 2400, Disk: 7500, Est Runtime: 69 SUBMITTED
+       SENT JOBN 12 164 4 2400 7500 69
+       RCVD SCHD 12 medium 0
+       job 12 (waiting) on medium 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 167: job 13 -- CPU: 3, Mem: 700, Disk: 1200, Est Runtime: 38 SUBMITTED
+       SENT JOBN 13 167 3 700 1200 38
+       RCVD SCHD 13 medium 0
+       job 13 (waiting) on medium 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 168: job 14 -- CPU: 7, Mem: 4300, Disk: 6200, Est Runtime: 657 SUBMITTED
+       SENT JOBN 14 168 7 4300 6200 657
+       RCVD SCHD 14 large 0
+       job 14 (waiting) on large 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+       job 15 -- CPU: 10, Mem: 6000, Disk: 2000, Est Runtime: 3 SUBMITTED
+       SENT JOBN 15 168 10 6000 2000 3
+       RCVD SCHD 15 xlarge 0
+       job 15 (waiting) on xlarge 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+       job 16 -- CPU: 30, Mem: 83600, Disk: 23100, Est Runtime: 449 SUBMITTED
+       SENT JOBN 16 168 30 83600 23100 449
+       RCVD SCHD 16 4xlarge 0
+       job 16 (waiting) on 4xlarge 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+       job 17 -- CPU: 107, Mem: 512000, Disk: 65900, Est Runtime: 57 SUBMITTED
+       SENT JOBN 17 168 107 512000 65900 57
+       RCVD SCHD 17 16xlarge 0
+       job 17 (waiting) on 16xlarge 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 169: job 18 -- CPU: 2, Mem: 600, Disk: 3600, Est Runtime: 6 SUBMITTED
+       SENT JOBN 18 169 2 600 3600 6
+       RCVD SCHD 18 small 0
+       job 18 (running) on small 0 (active) SCHEDULED
+       job 18 on small 0 RUNNING
+       SENT OK
+       RCVD REDY
+t 170: job 19 -- CPU: 2, Mem: 1900, Disk: 2700, Est Runtime: 20 SUBMITTED
+       SENT JOBN 19 170 2 1900 2700 20
+       RCVD SCHD 19 small 0
+       job 19 (waiting) on small 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 171: job 2 on medium 0 COMPLETED
+       job 12 on medium 0 RUNNING
+       SENT JCPL 171 2 medium 0
+       RCVD REDY
+       job 20 -- CPU: 2, Mem: 600, Disk: 300, Est Runtime: 33 SUBMITTED
+       SENT JOBN 20 171 2 600 300 33
+       RCVD SCHD 20 small 0
+       job 20 (waiting) on small 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 175: job 21 -- CPU: 5, Mem: 2200, Disk: 4400, Est Runtime: 64 SUBMITTED
+       SENT JOBN 21 175 5 2200 4400 64
+       RCVD SCHD 21 large 0
+       job 21 (waiting) on large 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 176: job 22 -- CPU: 1, Mem: 300, Disk: 1800, Est Runtime: 2269 SUBMITTED
+       SENT JOBN 22 176 1 300 1800 2269
+       RCVD SCHD 22 tiny 0
+       job 22 (waiting) on tiny 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 178: job 18 on small 0 COMPLETED
+       job 19 on small 0 RUNNING
+       SENT JCPL 178 18 small 0
+       RCVD REDY
+       job 23 -- CPU: 2, Mem: 1200, Disk: 4000, Est Runtime: 642 SUBMITTED
+       SENT JOBN 23 178 2 1200 4000 642
+       RCVD SCHD 23 small 0
+       job 23 (waiting) on small 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 179: job 24 -- CPU: 14, Mem: 10900, Disk: 38900, Est Runtime: 44 SUBMITTED
+       SENT JOBN 24 179 14 10900 38900 44
+       RCVD SCHD 24 xlarge 0
+       job 24 (waiting) on xlarge 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 181: job 25 -- CPU: 13, Mem: 22600, Disk: 18800, Est Runtime: 46 SUBMITTED
+       SENT JOBN 25 181 13 22600 18800 46
+       RCVD SCHD 25 xlarge 0
+       job 25 (waiting) on xlarge 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 182: job 26 -- CPU: 27, Mem: 41200, Disk: 7900, Est Runtime: 7 SUBMITTED
+       SENT JOBN 26 182 27 41200 7900 7
+       RCVD SCHD 26 2xlarge 0
+       job 26 (waiting) on 2xlarge 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 185: job 27 -- CPU: 2, Mem: 1900, Disk: 3000, Est Runtime: 4 SUBMITTED
+       SENT JOBN 27 185 2 1900 3000 4
+       RCVD SCHD 27 small 0
+       job 27 (waiting) on small 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 186: job 28 -- CPU: 16, Mem: 22200, Disk: 30300, Est Runtime: 848 SUBMITTED
+       SENT JOBN 28 186 16 22200 30300 848
+       RCVD SCHD 28 xlarge 0
+       job 28 (waiting) on xlarge 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+       job 29 -- CPU: 1, Mem: 700, Disk: 1000, Est Runtime: 3 SUBMITTED
+       SENT JOBN 29 186 1 700 1000 3
+       RCVD SCHD 29 tiny 0
+       job 29 (waiting) on tiny 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 190: job 30 -- CPU: 7, Mem: 3800, Disk: 8200, Est Runtime: 2698 SUBMITTED
+       SENT JOBN 30 190 7 3800 8200 2698
+       RCVD SCHD 30 large 0
+       job 30 (waiting) on large 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+       job 31 -- CPU: 14, Mem: 20400, Disk: 15300, Est Runtime: 18 SUBMITTED
+       SENT JOBN 31 190 14 20400 15300 18
+       RCVD SCHD 31 xlarge 0
+       job 31 (waiting) on xlarge 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 193: job 32 -- CPU: 26, Mem: 45900, Disk: 130800, Est Runtime: 16 SUBMITTED
+       SENT JOBN 32 193 26 45900 130800 16
+       RCVD SCHD 32 2xlarge 0
+       job 32 (waiting) on 2xlarge 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 195: job 19 on small 0 COMPLETED
+       job 20 on small 0 RUNNING
+       SENT JCPL 195 19 small 0
+       RCVD REDY
+       job 10 on large 0 COMPLETED
+       SENT JCPL 195 10 large 0
+       RCVD REDY
+t 196: job 3 on xlarge 0 RUNNING
+t 197: job 33 -- CPU: 1, Mem: 900, Disk: 700, Est Runtime: 162 SUBMITTED
+       SENT JOBN 33 197 1 900 700 162
+       RCVD SCHD 33 tiny 0
+       job 33 (waiting) on tiny 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+       job 34 -- CPU: 1, Mem: 600, Disk: 1100, Est Runtime: 90 SUBMITTED
+       SENT JOBN 34 197 1 600 1100 90
+       RCVD SCHD 34 tiny 0
+       job 34 (waiting) on tiny 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 201: job 35 -- CPU: 1, Mem: 1000, Disk: 1600, Est Runtime: 95 SUBMITTED
+       SENT JOBN 35 201 1 1000 1600 95
+       RCVD SCHD 35 tiny 0
+       job 35 (waiting) on tiny 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 204: job 36 -- CPU: 1, Mem: 900, Disk: 1800, Est Runtime: 1253 SUBMITTED
+       SENT JOBN 36 204 1 900 1800 1253
+       RCVD SCHD 36 tiny 0
+       job 36 (waiting) on tiny 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+       job 37 -- CPU: 3, Mem: 1400, Disk: 4100, Est Runtime: 181 SUBMITTED
+       SENT JOBN 37 204 3 1400 4100 181
+       RCVD SCHD 37 medium 0
+       job 37 (waiting) on medium 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 205: job 38 -- CPU: 13, Mem: 16100, Disk: 29500, Est Runtime: 5 SUBMITTED
+       SENT JOBN 38 205 13 16100 29500 5
+       RCVD SCHD 38 xlarge 0
+       job 38 (waiting) on xlarge 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 207: job 39 -- CPU: 4, Mem: 3300, Disk: 3900, Est Runtime: 29 SUBMITTED
+       SENT JOBN 39 207 4 3300 3900 29
+       RCVD SCHD 39 medium 0
+       job 39 (waiting) on medium 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+       job 40 -- CPU: 221, Mem: 512000, Disk: 4096000, Est Runtime: 228 SUBMITTED
+       SENT JOBN 40 207 221 512000 4096000 228
+       RCVD SCHD 40 16xlarge 0
+       job 40 (waiting) on 16xlarge 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+       job 41 -- CPU: 151, Mem: 512000, Disk: 4096000, Est Runtime: 1786 SUBMITTED
+       SENT JOBN 41 207 151 512000 4096000 1786
+       RCVD SCHD 41 16xlarge 0
+       job 41 (waiting) on 16xlarge 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 235: job 5 on 2xlarge 0 RUNNING
+t 236: job 22 on tiny 0 RUNNING
+t 249: job 7 on 4xlarge 0 RUNNING
+       job 16 on 4xlarge 0 RUNNING
+t 269: job 8 on 8xlarge 0 RUNNING
+t 273: job 12 on medium 0 COMPLETED
+       job 13 on medium 0 RUNNING
+       SENT JCPL 273 12 medium 0
+       RCVD REDY
+t 280: job 9 on 16xlarge 0 RUNNING
+t 293: job 13 on medium 0 COMPLETED
+       job 37 on medium 0 RUNNING
+       SENT JCPL 293 13 medium 0
+       RCVD REDY
+t 299: job 8 on 8xlarge 0 COMPLETED
+       SENT JCPL 299 8 8xlarge 0
+       RCVD REDY
+t 330: job 20 on small 0 COMPLETED
+       job 23 on small 0 RUNNING
+       SENT JCPL 330 20 small 0
+       RCVD REDY
+t 718: job 5 on 2xlarge 0 COMPLETED
+       job 26 on 2xlarge 0 RUNNING
+       SENT JCPL 718 5 2xlarge 0
+       RCVD REDY
+t 723: job 26 on 2xlarge 0 COMPLETED
+       job 32 on 2xlarge 0 RUNNING
+       SENT JCPL 723 26 2xlarge 0
+       RCVD REDY
+t 733: job 32 on 2xlarge 0 COMPLETED
+       SENT JCPL 733 32 2xlarge 0
+       RCVD REDY
+t 752: job 6 on large 0 COMPLETED
+       job 14 on large 0 RUNNING
+       SENT JCPL 752 6 large 0
+       RCVD REDY
+t 1039: job 37 on medium 0 COMPLETED
+        job 39 on medium 0 RUNNING
+        SENT JCPL 1039 37 medium 0
+        RCVD REDY
+t 1054: job 39 on medium 0 COMPLETED
+        SENT JCPL 1054 39 medium 0
+        RCVD REDY
+t 1185: job 3 on xlarge 0 COMPLETED
+        job 11 on xlarge 0 RUNNING
+        SENT JCPL 1185 3 xlarge 0
+        RCVD REDY
+t 1266: job 42 -- CPU: 1, Mem: 1000, Disk: 700, Est Runtime: 1 SUBMITTED
+        SENT JOBN 42 1266 1 1000 700 1
+        RCVD SCHD 42 medium 0
+        job 42 (running) on medium 0 (active) SCHEDULED
+        job 42 on medium 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 1268: job 42 on medium 0 COMPLETED
+        SENT JCPL 1268 42 medium 0
+        RCVD REDY
+t 1349: job 16 on 4xlarge 0 COMPLETED
+        SENT JCPL 1349 16 4xlarge 0
+        RCVD REDY
+t 1353: job 43 -- CPU: 63, Mem: 214800, Disk: 35000, Est Runtime: 471 SUBMITTED
+        SENT JOBN 43 1353 63 214800 35000 471
+        RCVD SCHD 43 8xlarge 0
+        job 43 (running) on 8xlarge 0 (active) SCHEDULED
+        job 43 on 8xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 1424: job 23 on small 0 COMPLETED
+        job 27 on small 0 RUNNING
+        SENT JCPL 1424 23 small 0
+        RCVD REDY
+t 1430: job 9 on 16xlarge 0 COMPLETED
+        job 17 on 16xlarge 0 RUNNING
+        SENT JCPL 1430 9 16xlarge 0
+        RCVD REDY
+t 1436: job 27 on small 0 COMPLETED
+        SENT JCPL 1436 27 small 0
+        RCVD REDY
+t 1448: job 44 -- CPU: 15, Mem: 2800, Disk: 59300, Est Runtime: 48 SUBMITTED
+        SENT JOBN 44 1448 15 2800 59300 48
+        RCVD SCHD 44 2xlarge 0
+        job 44 (running) on 2xlarge 0 (active) SCHEDULED
+        job 44 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 1495: job 44 on 2xlarge 0 COMPLETED
+        SENT JCPL 1495 44 2xlarge 0
+        RCVD REDY
+t 1560: job 45 -- CPU: 3, Mem: 2500, Disk: 4200, Est Runtime: 159 SUBMITTED
+        SENT JOBN 45 1560 3 2500 4200 159
+        RCVD SCHD 45 medium 0
+        job 45 (running) on medium 0 (active) SCHEDULED
+        job 45 on medium 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 1585: job 46 -- CPU: 2, Mem: 1700, Disk: 3500, Est Runtime: 262 SUBMITTED
+        SENT JOBN 46 1585 2 1700 3500 262
+        RCVD SCHD 46 small 0
+        job 46 (running) on small 0 (active) SCHEDULED
+        job 46 on small 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 1613: job 7 on 4xlarge 0 COMPLETED
+        SENT JCPL 1613 7 4xlarge 0
+        RCVD REDY
+t 1615: job 47 -- CPU: 64, Mem: 283900, Disk: 44800, Est Runtime: 963 SUBMITTED
+        SENT JOBN 47 1615 64 283900 44800 963
+        RCVD SCHD 47 16xlarge 0
+        job 47 (waiting) on 16xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 1638: job 48 -- CPU: 2, Mem: 300, Disk: 400, Est Runtime: 487 SUBMITTED
+        SENT JOBN 48 1638 2 300 400 487
+        RCVD SCHD 48 2xlarge 0
+        job 48 (running) on 2xlarge 0 (active) SCHEDULED
+        job 48 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 1745: job 49 -- CPU: 21, Mem: 50200, Disk: 28400, Est Runtime: 3 SUBMITTED
+        SENT JOBN 49 1745 21 50200 28400 3
+        RCVD SCHD 49 2xlarge 0
+        job 49 (running) on 2xlarge 0 (active) SCHEDULED
+        job 49 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 1776: job 49 on 2xlarge 0 COMPLETED
+        SENT JCPL 1776 49 2xlarge 0
+        RCVD REDY
+t 1784: job 22 on tiny 0 COMPLETED
+        job 29 on tiny 0 RUNNING
+        SENT JCPL 1784 22 tiny 0
+        RCVD REDY
+t 1788: job 50 -- CPU: 15, Mem: 1700, Disk: 28300, Est Runtime: 7 SUBMITTED
+        SENT JOBN 50 1788 15 1700 28300 7
+        RCVD SCHD 50 2xlarge 0
+        job 50 (running) on 2xlarge 0 (active) SCHEDULED
+        job 50 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 1806: job 50 on 2xlarge 0 COMPLETED
+        SENT JCPL 1806 50 2xlarge 0
+        RCVD REDY
+t 1821: job 29 on tiny 0 COMPLETED
+        job 33 on tiny 0 RUNNING
+        SENT JCPL 1821 29 tiny 0
+        RCVD REDY
+t 1827: job 51 -- CPU: 3, Mem: 1500, Disk: 2900, Est Runtime: 346 SUBMITTED
+        SENT JOBN 51 1827 3 1500 2900 346
+        RCVD SCHD 51 2xlarge 0
+        job 51 (running) on 2xlarge 0 (active) SCHEDULED
+        job 51 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 1904: job 11 on xlarge 0 COMPLETED
+        job 15 on xlarge 0 RUNNING
+        SENT JCPL 1904 11 xlarge 0
+        RCVD REDY
+t 1909: job 52 -- CPU: 1, Mem: 200, Disk: 200, Est Runtime: 27 SUBMITTED
+        SENT JOBN 52 1909 1 200 200 27
+        RCVD SCHD 52 medium 0
+        job 52 (running) on medium 0 (active) SCHEDULED
+        job 52 on medium 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 1910: job 15 on xlarge 0 COMPLETED
+        job 24 on xlarge 0 RUNNING
+        SENT JCPL 1910 15 xlarge 0
+        RCVD REDY
+t 1933: job 52 on medium 0 COMPLETED
+        SENT JCPL 1933 52 medium 0
+        RCVD REDY
+t 1942: job 24 on xlarge 0 COMPLETED
+        job 25 on xlarge 0 RUNNING
+        SENT JCPL 1942 24 xlarge 0
+        RCVD REDY
+t 1963: job 33 on tiny 0 COMPLETED
+        job 34 on tiny 0 RUNNING
+        SENT JCPL 1963 33 tiny 0
+        RCVD REDY
+t 1972: job 14 on large 0 COMPLETED
+        job 21 on large 0 RUNNING
+        SENT JCPL 1972 14 large 0
+        RCVD REDY
+        job 48 on 2xlarge 0 COMPLETED
+        SENT JCPL 1972 48 2xlarge 0
+        RCVD REDY
+t 1974: job 53 -- CPU: 1, Mem: 100, Disk: 900, Est Runtime: 178 SUBMITTED
+        SENT JOBN 53 1974 1 100 900 178
+        RCVD SCHD 53 medium 0
+        job 53 (running) on medium 0 (active) SCHEDULED
+        job 53 on medium 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 1991: job 25 on xlarge 0 COMPLETED
+        job 28 on xlarge 0 RUNNING
+        SENT JCPL 1991 25 xlarge 0
+        RCVD REDY
+t 2017: job 21 on large 0 COMPLETED
+        job 30 on large 0 RUNNING
+        SENT JCPL 2017 21 large 0
+        RCVD REDY
+t 2022: job 54 -- CPU: 6, Mem: 3600, Disk: 1300, Est Runtime: 835 SUBMITTED
+        SENT JOBN 54 2022 6 3600 1300 835
+        RCVD SCHD 54 2xlarge 0
+        job 54 (running) on 2xlarge 0 (active) SCHEDULED
+        job 54 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2089: job 55 -- CPU: 3, Mem: 2300, Disk: 3500, Est Runtime: 19 SUBMITTED
+        SENT JOBN 55 2089 3 2300 3500 19
+        RCVD SCHD 55 2xlarge 0
+        job 55 (running) on 2xlarge 0 (active) SCHEDULED
+        job 55 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2136: job 56 -- CPU: 1, Mem: 900, Disk: 600, Est Runtime: 21 SUBMITTED
+        SENT JOBN 56 2136 1 900 600 21
+        RCVD SCHD 56 large 0
+        job 56 (running) on large 0 (active) SCHEDULED
+        job 56 on large 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2176: job 56 on large 0 COMPLETED
+        SENT JCPL 2176 56 large 0
+        RCVD REDY
+t 2179: job 57 -- CPU: 4, Mem: 3500, Disk: 2900, Est Runtime: 28 SUBMITTED
+        SENT JOBN 57 2179 4 3500 2900 28
+        RCVD SCHD 57 2xlarge 0
+        job 57 (running) on 2xlarge 0 (active) SCHEDULED
+        job 57 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2197: job 57 on 2xlarge 0 COMPLETED
+        SENT JCPL 2197 57 2xlarge 0
+        RCVD REDY
+t 2203: job 58 -- CPU: 14, Mem: 21900, Disk: 14200, Est Runtime: 241 SUBMITTED
+        SENT JOBN 58 2203 14 21900 14200 241
+        RCVD SCHD 58 2xlarge 0
+        job 58 (running) on 2xlarge 0 (active) SCHEDULED
+        job 58 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2230: job 46 on small 0 COMPLETED
+        SENT JCPL 2230 46 small 0
+        RCVD REDY
+t 2255: job 59 -- CPU: 2, Mem: 300, Disk: 3900, Est Runtime: 34 SUBMITTED
+        SENT JOBN 59 2255 2 300 3900 34
+        RCVD SCHD 59 small 0
+        job 59 (running) on small 0 (active) SCHEDULED
+        job 59 on small 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2288: job 60 -- CPU: 4, Mem: 1200, Disk: 7400, Est Runtime: 81 SUBMITTED
+        SENT JOBN 60 2288 4 1200 7400 81
+        RCVD SCHD 60 2xlarge 0
+        job 60 (running) on 2xlarge 0 (active) SCHEDULED
+        job 60 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2300: job 59 on small 0 COMPLETED
+        SENT JCPL 2300 59 small 0
+        RCVD REDY
+t 2302: job 61 -- CPU: 3, Mem: 1400, Disk: 5000, Est Runtime: 59 SUBMITTED
+        SENT JOBN 61 2302 3 1400 5000 59
+        RCVD SCHD 61 4xlarge 0
+        job 61 (running) on 4xlarge 0 (active) SCHEDULED
+        job 61 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2321: job 17 on 16xlarge 0 COMPLETED
+        job 40 on 16xlarge 0 RUNNING
+        SENT JCPL 2321 17 16xlarge 0
+        RCVD REDY
+t 2324: job 62 -- CPU: 1, Mem: 200, Disk: 2000, Est Runtime: 51 SUBMITTED
+        SENT JOBN 62 2324 1 200 2000 51
+        RCVD SCHD 62 small 0
+        job 62 (running) on small 0 (active) SCHEDULED
+        job 62 on small 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2341: job 61 on 4xlarge 0 COMPLETED
+        SENT JCPL 2341 61 4xlarge 0
+        RCVD REDY
+t 2346: job 60 on 2xlarge 0 COMPLETED
+        SENT JCPL 2346 60 2xlarge 0
+        RCVD REDY
+t 2361: job 43 on 8xlarge 0 COMPLETED
+        SENT JCPL 2361 43 8xlarge 0
+        RCVD REDY
+t 2365: job 62 on small 0 COMPLETED
+        SENT JCPL 2365 62 small 0
+        RCVD REDY
+t 2367: job 63 -- CPU: 21, Mem: 14000, Disk: 4600, Est Runtime: 28 SUBMITTED
+        SENT JOBN 63 2367 21 14000 4600 28
+        RCVD SCHD 63 4xlarge 0
+        job 63 (running) on 4xlarge 0 (active) SCHEDULED
+        job 63 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2368: job 64 -- CPU: 3, Mem: 2700, Disk: 1900, Est Runtime: 14 SUBMITTED
+        SENT JOBN 64 2368 3 2700 1900 14
+        RCVD SCHD 64 2xlarge 0
+        job 64 (running) on 2xlarge 0 (active) SCHEDULED
+        job 64 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2378: job 64 on 2xlarge 0 COMPLETED
+        SENT JCPL 2378 64 2xlarge 0
+        RCVD REDY
+t 2398: job 65 -- CPU: 1, Mem: 400, Disk: 1200, Est Runtime: 2311 SUBMITTED
+        SENT JOBN 65 2398 1 400 1200 2311
+        RCVD SCHD 65 small 0
+        job 65 (running) on small 0 (active) SCHEDULED
+        job 65 on small 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2399: job 66 -- CPU: 9, Mem: 6600, Disk: 1000, Est Runtime: 4 SUBMITTED
+        SENT JOBN 66 2399 9 6600 1000 4
+        RCVD SCHD 66 4xlarge 0
+        job 66 (running) on 4xlarge 0 (active) SCHEDULED
+        job 66 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2401: job 53 on medium 0 COMPLETED
+        SENT JCPL 2401 53 medium 0
+        RCVD REDY
+t 2406: job 66 on 4xlarge 0 COMPLETED
+        SENT JCPL 2406 66 4xlarge 0
+        RCVD REDY
+t 2421: job 63 on 4xlarge 0 COMPLETED
+        SENT JCPL 2421 63 4xlarge 0
+        RCVD REDY
+t 2422: job 67 -- CPU: 6, Mem: 5000, Disk: 9100, Est Runtime: 20 SUBMITTED
+        SENT JOBN 67 2422 6 5000 9100 20
+        RCVD SCHD 67 2xlarge 0
+        job 67 (running) on 2xlarge 0 (active) SCHEDULED
+        job 67 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2426: job 58 on 2xlarge 0 COMPLETED
+        SENT JCPL 2426 58 2xlarge 0
+        RCVD REDY
+t 2435: job 68 -- CPU: 2, Mem: 700, Disk: 2200, Est Runtime: 7 SUBMITTED
+        SENT JOBN 68 2435 2 700 2200 7
+        RCVD SCHD 68 2xlarge 0
+        job 68 (running) on 2xlarge 0 (active) SCHEDULED
+        job 68 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2437: job 69 -- CPU: 6, Mem: 6400, Disk: 2600, Est Runtime: 47 SUBMITTED
+        SENT JOBN 69 2437 6 6400 2600 47
+        RCVD SCHD 69 2xlarge 0
+        job 69 (running) on 2xlarge 0 (active) SCHEDULED
+        job 69 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2441: job 68 on 2xlarge 0 COMPLETED
+        SENT JCPL 2441 68 2xlarge 0
+        RCVD REDY
+t 2447: job 70 -- CPU: 4, Mem: 3600, Disk: 2400, Est Runtime: 15 SUBMITTED
+        SENT JOBN 70 2447 4 3600 2400 15
+        RCVD SCHD 70 2xlarge 0
+        job 70 (running) on 2xlarge 0 (active) SCHEDULED
+        job 70 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2449: job 71 -- CPU: 1, Mem: 300, Disk: 1500, Est Runtime: 29 SUBMITTED
+        SENT JOBN 71 2449 1 300 1500 29
+        RCVD SCHD 71 small 0
+        job 71 (running) on small 0 (active) SCHEDULED
+        job 71 on small 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2453: job 72 -- CPU: 1, Mem: 600, Disk: 1200, Est Runtime: 2065 SUBMITTED
+        SENT JOBN 72 2453 1 600 1200 2065
+        RCVD SCHD 72 medium 0
+        job 72 (running) on medium 0 (active) SCHEDULED
+        job 72 on medium 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2456: job 67 on 2xlarge 0 COMPLETED
+        SENT JCPL 2456 67 2xlarge 0
+        RCVD REDY
+        job 73 -- CPU: 3, Mem: 2400, Disk: 4700, Est Runtime: 1775 SUBMITTED
+        SENT JOBN 73 2456 3 2400 4700 1775
+        RCVD SCHD 73 2xlarge 0
+        job 73 (running) on 2xlarge 0 (active) SCHEDULED
+        job 73 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2457: job 70 on 2xlarge 0 COMPLETED
+        SENT JCPL 2457 70 2xlarge 0
+        RCVD REDY
+t 2459: job 74 -- CPU: 8, Mem: 2100, Disk: 5400, Est Runtime: 134 SUBMITTED
+        SENT JOBN 74 2459 8 2100 5400 134
+        RCVD SCHD 74 2xlarge 0
+        job 74 (running) on 2xlarge 0 (active) SCHEDULED
+        job 74 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2462: job 75 -- CPU: 12, Mem: 11800, Disk: 26700, Est Runtime: 255 SUBMITTED
+        SENT JOBN 75 2462 12 11800 26700 255
+        RCVD SCHD 75 4xlarge 0
+        job 75 (running) on 4xlarge 0 (active) SCHEDULED
+        job 75 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2466: job 76 -- CPU: 1, Mem: 200, Disk: 1300, Est Runtime: 4 SUBMITTED
+        SENT JOBN 76 2466 1 200 1300 4
+        RCVD SCHD 76 large 0
+        job 76 (running) on large 0 (active) SCHEDULED
+        job 76 on large 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2468: job 69 on 2xlarge 0 COMPLETED
+        SENT JCPL 2468 69 2xlarge 0
+        RCVD REDY
+t 2469: job 76 on large 0 COMPLETED
+        SENT JCPL 2469 76 large 0
+        RCVD REDY
+        job 77 -- CPU: 4, Mem: 3400, Disk: 700, Est Runtime: 1079 SUBMITTED
+        SENT JOBN 77 2469 4 3400 700 1079
+        RCVD SCHD 77 2xlarge 0
+        job 77 (running) on 2xlarge 0 (active) SCHEDULED
+        job 77 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2470: job 78 -- CPU: 5, Mem: 1800, Disk: 8800, Est Runtime: 10 SUBMITTED
+        SENT JOBN 78 2470 5 1800 8800 10
+        RCVD SCHD 78 2xlarge 0
+        job 78 (running) on 2xlarge 0 (active) SCHEDULED
+        job 78 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2471: job 79 -- CPU: 2, Mem: 1600, Disk: 4000, Est Runtime: 105 SUBMITTED
+        SENT JOBN 79 2471 2 1600 4000 105
+        RCVD SCHD 79 4xlarge 0
+        job 79 (running) on 4xlarge 0 (active) SCHEDULED
+        job 79 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2475: job 80 -- CPU: 56, Mem: 62500, Disk: 558200, Est Runtime: 11 SUBMITTED
+        SENT JOBN 80 2475 56 62500 558200 11
+        RCVD SCHD 80 8xlarge 0
+        job 80 (running) on 8xlarge 0 (active) SCHEDULED
+        job 80 on 8xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2476: job 78 on 2xlarge 0 COMPLETED
+        SENT JCPL 2476 78 2xlarge 0
+        RCVD REDY
+t 2479: job 81 -- CPU: 116, Mem: 339000, Disk: 451100, Est Runtime: 84 SUBMITTED
+        SENT JOBN 81 2479 116 339000 451100 84
+        RCVD SCHD 81 16xlarge 0
+        job 81 (waiting) on 16xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2481: job 82 -- CPU: 1, Mem: 800, Disk: 900, Est Runtime: 1042 SUBMITTED
+        SENT JOBN 82 2481 1 800 900 1042
+        RCVD SCHD 82 large 0
+        job 82 (running) on large 0 (active) SCHEDULED
+        job 82 on large 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2482: job 71 on small 0 COMPLETED
+        SENT JCPL 2482 71 small 0
+        RCVD REDY
+t 2483: job 80 on 8xlarge 0 COMPLETED
+        SENT JCPL 2483 80 8xlarge 0
+        RCVD REDY
+t 2485: job 83 -- CPU: 14, Mem: 24900, Disk: 31800, Est Runtime: 3 SUBMITTED
+        SENT JOBN 83 2485 14 24900 31800 3
+        RCVD SCHD 83 4xlarge 0
+        job 83 (running) on 4xlarge 0 (active) SCHEDULED
+        job 83 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2488: job 84 -- CPU: 1, Mem: 1000, Disk: 1700, Est Runtime: 145 SUBMITTED
+        SENT JOBN 84 2488 1 1000 1700 145
+        RCVD SCHD 84 small 0
+        job 84 (running) on small 0 (active) SCHEDULED
+        job 84 on small 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2489: job 83 on 4xlarge 0 COMPLETED
+        SENT JCPL 2489 83 4xlarge 0
+        RCVD REDY
+t 2491: job 85 -- CPU: 12, Mem: 10800, Disk: 38700, Est Runtime: 73 SUBMITTED
+        SENT JOBN 85 2491 12 10800 38700 73
+        RCVD SCHD 85 4xlarge 0
+        job 85 (running) on 4xlarge 0 (active) SCHEDULED
+        job 85 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2495: job 86 -- CPU: 1, Mem: 400, Disk: 1500, Est Runtime: 792 SUBMITTED
+        SENT JOBN 86 2495 1 400 1500 792
+        RCVD SCHD 86 2xlarge 0
+        job 86 (running) on 2xlarge 0 (active) SCHEDULED
+        job 86 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2496: job 87 -- CPU: 4, Mem: 800, Disk: 2400, Est Runtime: 131 SUBMITTED
+        SENT JOBN 87 2496 4 800 2400 131
+        RCVD SCHD 87 2xlarge 0
+        job 87 (running) on 2xlarge 0 (active) SCHEDULED
+        job 87 on 2xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2499: job 88 -- CPU: 2, Mem: 600, Disk: 1300, Est Runtime: 31 SUBMITTED
+        SENT JOBN 88 2499 2 600 1300 31
+        RCVD SCHD 88 4xlarge 0
+        job 88 (running) on 4xlarge 0 (active) SCHEDULED
+        job 88 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2503: job 89 -- CPU: 60, Mem: 187700, Disk: 718800, Est Runtime: 461 SUBMITTED
+        SENT JOBN 89 2503 60 187700 718800 461
+        RCVD SCHD 89 8xlarge 0
+        job 89 (running) on 8xlarge 0 (active) SCHEDULED
+        job 89 on 8xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2507: job 90 -- CPU: 104, Mem: 135400, Disk: 697600, Est Runtime: 167 SUBMITTED
+        SENT JOBN 90 2507 104 135400 697600 167
+        RCVD SCHD 90 8xlarge 0
+        job 90 (waiting) on 8xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2510: job 91 -- CPU: 1, Mem: 900, Disk: 900, Est Runtime: 2068 SUBMITTED
+        SENT JOBN 91 2510 1 900 900 2068
+        RCVD SCHD 91 4xlarge 0
+        job 91 (running) on 4xlarge 0 (active) SCHEDULED
+        job 91 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2513: job 92 -- CPU: 1, Mem: 700, Disk: 1400, Est Runtime: 3 SUBMITTED
+        SENT JOBN 92 2513 1 700 1400 3
+        RCVD SCHD 92 4xlarge 0
+        job 92 (running) on 4xlarge 0 (active) SCHEDULED
+        job 92 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2515: job 92 on 4xlarge 0 COMPLETED
+        SENT JCPL 2515 92 4xlarge 0
+        RCVD REDY
+t 2516: job 93 -- CPU: 5, Mem: 600, Disk: 2400, Est Runtime: 353 SUBMITTED
+        SENT JOBN 93 2516 5 600 2400 353
+        RCVD SCHD 93 4xlarge 0
+        job 93 (running) on 4xlarge 0 (active) SCHEDULED
+        job 93 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2522: job 94 -- CPU: 7, Mem: 1600, Disk: 14500, Est Runtime: 68 SUBMITTED
+        SENT JOBN 94 2522 7 1600 14500 68
+        RCVD SCHD 94 4xlarge 0
+        job 94 (running) on 4xlarge 0 (active) SCHEDULED
+        job 94 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2526: job 95 -- CPU: 1, Mem: 500, Disk: 600, Est Runtime: 82 SUBMITTED
+        SENT JOBN 95 2526 1 500 600 82
+        RCVD SCHD 95 4xlarge 0
+        job 95 (running) on 4xlarge 0 (active) SCHEDULED
+        job 95 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2530: job 96 -- CPU: 1, Mem: 300, Disk: 500, Est Runtime: 1523 SUBMITTED
+        SENT JOBN 96 2530 1 300 500 1523
+        RCVD SCHD 96 4xlarge 0
+        job 96 (running) on 4xlarge 0 (active) SCHEDULED
+        job 96 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2533: job 88 on 4xlarge 0 COMPLETED
+        SENT JCPL 2533 88 4xlarge 0
+        RCVD REDY
+        job 97 -- CPU: 1, Mem: 600, Disk: 1900, Est Runtime: 3338 SUBMITTED
+        SENT JOBN 97 2533 1 600 1900 3338
+        RCVD SCHD 97 4xlarge 0
+        job 97 (running) on 4xlarge 0 (active) SCHEDULED
+        job 97 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2535: job 98 -- CPU: 226, Mem: 512000, Disk: 34300, Est Runtime: 1 SUBMITTED
+        SENT JOBN 98 2535 226 512000 34300 1
+        RCVD SCHD 98 16xlarge 0
+        job 98 (waiting) on 16xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2549: job 85 on 4xlarge 0 COMPLETED
+        SENT JCPL 2549 85 4xlarge 0
+        RCVD REDY
+t 2570: job 94 on 4xlarge 0 COMPLETED
+        SENT JCPL 2570 94 4xlarge 0
+        RCVD REDY
+t 2572: job 95 on 4xlarge 0 COMPLETED
+        SENT JCPL 2572 95 4xlarge 0
+        RCVD REDY
+t 2577: job 99 -- CPU: 57, Mem: 136600, Disk: 447700, Est Runtime: 63 SUBMITTED
+        SENT JOBN 99 2577 57 136600 447700 63
+        RCVD SCHD 99 8xlarge 0
+        job 99 (waiting) on 8xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2620: job 100 -- CPU: 23, Mem: 11500, Disk: 100400, Est Runtime: 26 SUBMITTED
+        SENT JOBN 100 2620 23 11500 100400 26
+        RCVD SCHD 100 4xlarge 0
+        job 100 (running) on 4xlarge 0 (active) SCHEDULED
+        job 100 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2631: job 101 -- CPU: 167, Mem: 512000, Disk: 4096000, Est Runtime: 126 SUBMITTED
+        SENT JOBN 101 2631 167 512000 4096000 126
+        RCVD SCHD 101 16xlarge 0
+        job 101 (waiting) on 16xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2666: job 100 on 4xlarge 0 COMPLETED
+        SENT JCPL 2666 100 4xlarge 0
+        RCVD REDY
+t 2784: job 102 -- CPU: 1, Mem: 200, Disk: 1700, Est Runtime: 6 SUBMITTED
+        SENT JOBN 102 2784 1 200 1700 6
+        RCVD SCHD 102 4xlarge 0
+        job 102 (running) on 4xlarge 0 (active) SCHEDULED
+        job 102 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2790: job 102 on 4xlarge 0 COMPLETED
+        SENT JCPL 2790 102 4xlarge 0
+        RCVD REDY
+t 2795: job 79 on 4xlarge 0 COMPLETED
+        SENT JCPL 2795 79 4xlarge 0
+        RCVD REDY
+t 2813: job 103 -- CPU: 5, Mem: 500, Disk: 1100, Est Runtime: 31 SUBMITTED
+        SENT JOBN 103 2813 5 500 1100 31
+        RCVD SCHD 103 4xlarge 0
+        job 103 (running) on 4xlarge 0 (active) SCHEDULED
+        job 103 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2814: job 104 -- CPU: 4, Mem: 3500, Disk: 2500, Est Runtime: 48 SUBMITTED
+        SENT JOBN 104 2814 4 3500 2500 48
+        RCVD SCHD 104 4xlarge 0
+        job 104 (running) on 4xlarge 0 (active) SCHEDULED
+        job 104 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2838: job 105 -- CPU: 1, Mem: 600, Disk: 1900, Est Runtime: 331 SUBMITTED
+        SENT JOBN 105 2838 1 600 1900 331
+        RCVD SCHD 105 4xlarge 0
+        job 105 (running) on 4xlarge 0 (active) SCHEDULED
+        job 105 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2839: job 104 on 4xlarge 0 COMPLETED
+        SENT JCPL 2839 104 4xlarge 0
+        RCVD REDY
+t 2852: job 45 on medium 0 COMPLETED
+        SENT JCPL 2852 45 medium 0
+        RCVD REDY
+t 2854: job 93 on 4xlarge 0 COMPLETED
+        SENT JCPL 2854 93 4xlarge 0
+        RCVD REDY
+t 2856: job 103 on 4xlarge 0 COMPLETED
+        SENT JCPL 2856 103 4xlarge 0
+        RCVD REDY
+t 2858: job 106 -- CPU: 5, Mem: 1300, Disk: 9800, Est Runtime: 1417 SUBMITTED
+        SENT JOBN 106 2858 5 1300 9800 1417
+        RCVD SCHD 106 4xlarge 0
+        job 106 (running) on 4xlarge 0 (active) SCHEDULED
+        job 106 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2867: job 107 -- CPU: 6, Mem: 1600, Disk: 9000, Est Runtime: 41 SUBMITTED
+        SENT JOBN 107 2867 6 1600 9000 41
+        RCVD SCHD 107 4xlarge 0
+        job 107 (running) on 4xlarge 0 (active) SCHEDULED
+        job 107 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2884: job 108 -- CPU: 3, Mem: 3000, Disk: 6200, Est Runtime: 647 SUBMITTED
+        SENT JOBN 108 2884 3 3000 6200 647
+        RCVD SCHD 108 medium 0
+        job 108 (running) on medium 0 (active) SCHEDULED
+        job 108 on medium 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2888: job 107 on 4xlarge 0 COMPLETED
+        SENT JCPL 2888 107 4xlarge 0
+        RCVD REDY
+t 2889: job 109 -- CPU: 14, Mem: 5500, Disk: 1800, Est Runtime: 1 SUBMITTED
+        SENT JOBN 109 2889 14 5500 1800 1
+        RCVD SCHD 109 4xlarge 0
+        job 109 (running) on 4xlarge 0 (active) SCHEDULED
+        job 109 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2891: job 109 on 4xlarge 0 COMPLETED
+        SENT JCPL 2891 109 4xlarge 0
+        RCVD REDY
+t 2893: job 110 -- CPU: 5, Mem: 1600, Disk: 6900, Est Runtime: 1487 SUBMITTED
+        SENT JOBN 110 2893 5 1600 6900 1487
+        RCVD SCHD 110 4xlarge 0
+        job 110 (running) on 4xlarge 0 (active) SCHEDULED
+        job 110 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2895: job 111 -- CPU: 14, Mem: 20300, Disk: 54300, Est Runtime: 36 SUBMITTED
+        SENT JOBN 111 2895 14 20300 54300 36
+        RCVD SCHD 111 4xlarge 0
+        job 111 (running) on 4xlarge 0 (active) SCHEDULED
+        job 111 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2901: job 112 -- CPU: 15, Mem: 31000, Disk: 13400, Est Runtime: 6 SUBMITTED
+        SENT JOBN 112 2901 15 31000 13400 6
+        RCVD SCHD 112 4xlarge 0
+        job 112 (running) on 4xlarge 0 (active) SCHEDULED
+        job 112 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2904: job 113 -- CPU: 117, Mem: 512000, Disk: 628900, Est Runtime: 52 SUBMITTED
+        SENT JOBN 113 2904 117 512000 628900 52
+        RCVD SCHD 113 16xlarge 0
+        job 113 (waiting) on 16xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2908: job 114 -- CPU: 1, Mem: 800, Disk: 300, Est Runtime: 271 SUBMITTED
+        SENT JOBN 114 2908 1 800 300 271
+        RCVD SCHD 114 4xlarge 0
+        job 114 (running) on 4xlarge 0 (active) SCHEDULED
+        job 114 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2910: job 115 -- CPU: 1, Mem: 100, Disk: 1900, Est Runtime: 618 SUBMITTED
+        SENT JOBN 115 2910 1 100 1900 618
+        RCVD SCHD 115 4xlarge 0
+        job 115 (running) on 4xlarge 0 (active) SCHEDULED
+        job 115 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2913: job 116 -- CPU: 28, Mem: 12200, Disk: 18500, Est Runtime: 206 SUBMITTED
+        SENT JOBN 116 2913 28 12200 18500 206
+        RCVD SCHD 116 2xlarge 0
+        job 116 (waiting) on 2xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+        job 117 -- CPU: 1, Mem: 500, Disk: 100, Est Runtime: 26 SUBMITTED
+        SENT JOBN 117 2913 1 500 100 26
+        RCVD SCHD 117 4xlarge 0
+        job 117 (running) on 4xlarge 0 (active) SCHEDULED
+        job 117 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2914: job 112 on 4xlarge 0 COMPLETED
+        SENT JCPL 2914 112 4xlarge 0
+        RCVD REDY
+t 2917: job 118 -- CPU: 22, Mem: 12700, Disk: 123800, Est Runtime: 91 SUBMITTED
+        SENT JOBN 118 2917 22 12700 123800 91
+        RCVD SCHD 118 2xlarge 0
+        job 118 (waiting) on 2xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+        job 119 -- CPU: 12, Mem: 14400, Disk: 48100, Est Runtime: 374 SUBMITTED
+        SENT JOBN 119 2917 12 14400 48100 374
+        RCVD SCHD 119 4xlarge 0
+        job 119 (running) on 4xlarge 0 (active) SCHEDULED
+        job 119 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2918: job 120 -- CPU: 2, Mem: 200, Disk: 2600, Est Runtime: 300 SUBMITTED
+        SENT JOBN 120 2918 2 200 2600 300
+        RCVD SCHD 120 4xlarge 0
+        job 120 (running) on 4xlarge 0 (active) SCHEDULED
+        job 120 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2921: job 121 -- CPU: 3, Mem: 300, Disk: 2100, Est Runtime: 15 SUBMITTED
+        SENT JOBN 121 2921 3 300 2100 15
+        RCVD SCHD 121 4xlarge 0
+        job 121 (running) on 4xlarge 0 (active) SCHEDULED
+        job 121 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2922: job 122 -- CPU: 8, Mem: 8000, Disk: 9000, Est Runtime: 7 SUBMITTED
+        SENT JOBN 122 2922 8 8000 9000 7
+        RCVD SCHD 122 large 0
+        job 122 (waiting) on large 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2924: job 123 -- CPU: 8, Mem: 4400, Disk: 8400, Est Runtime: 665 SUBMITTED
+        SENT JOBN 123 2924 8 4400 8400 665
+        RCVD SCHD 123 large 0
+        job 123 (waiting) on large 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2925: job 124 -- CPU: 3, Mem: 600, Disk: 5400, Est Runtime: 70 SUBMITTED
+        SENT JOBN 124 2925 3 600 5400 70
+        RCVD SCHD 124 4xlarge 0
+        job 124 (running) on 4xlarge 0 (active) SCHEDULED
+        job 124 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2929: job 125 -- CPU: 100, Mem: 512000, Disk: 2122500, Est Runtime: 32 SUBMITTED
+        SENT JOBN 125 2929 100 512000 2122500 32
+        RCVD SCHD 125 16xlarge 0
+        job 125 (waiting) on 16xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2936: job 117 on 4xlarge 0 COMPLETED
+        SENT JCPL 2936 117 4xlarge 0
+        RCVD REDY
+t 2937: job 28 on xlarge 0 COMPLETED
+        job 31 on xlarge 0 RUNNING
+        SENT JCPL 2937 28 xlarge 0
+        RCVD REDY
+t 2939: job 126 -- CPU: 1, Mem: 1300, Disk: 3600, Est Runtime: 1148 SUBMITTED
+        SENT JOBN 126 2939 1 1300 3600 1148
+        RCVD SCHD 126 4xlarge 0
+        job 126 (running) on 4xlarge 0 (active) SCHEDULED
+        job 126 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2944: job 127 -- CPU: 2, Mem: 300, Disk: 1300, Est Runtime: 2673 SUBMITTED
+        SENT JOBN 127 2944 2 300 1300 2673
+        RCVD SCHD 127 small 0
+        job 127 (waiting) on small 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2945: job 111 on 4xlarge 0 COMPLETED
+        SENT JCPL 2945 111 4xlarge 0
+        RCVD REDY
+t 2948: job 128 -- CPU: 16, Mem: 3600, Disk: 52400, Est Runtime: 35 SUBMITTED
+        SENT JOBN 128 2948 16 3600 52400 35
+        RCVD SCHD 128 xlarge 0
+        job 128 (waiting) on xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2950: job 129 -- CPU: 2, Mem: 1000, Disk: 2500, Est Runtime: 8 SUBMITTED
+        SENT JOBN 129 2950 2 1000 2500 8
+        RCVD SCHD 129 4xlarge 0
+        job 129 (running) on 4xlarge 0 (active) SCHEDULED
+        job 129 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2952: job 130 -- CPU: 5, Mem: 2400, Disk: 6000, Est Runtime: 9 SUBMITTED
+        SENT JOBN 130 2952 5 2400 6000 9
+        RCVD SCHD 130 4xlarge 0
+        job 130 (running) on 4xlarge 0 (active) SCHEDULED
+        job 130 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2953: job 131 -- CPU: 122, Mem: 512000, Disk: 2369700, Est Runtime: 12 SUBMITTED
+        SENT JOBN 131 2953 122 512000 2369700 12
+        RCVD SCHD 131 16xlarge 0
+        job 131 (waiting) on 16xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2954: job 121 on 4xlarge 0 COMPLETED
+        SENT JCPL 2954 121 4xlarge 0
+        RCVD REDY
+t 2957: job 132 -- CPU: 1, Mem: 100, Disk: 1400, Est Runtime: 1568 SUBMITTED
+        SENT JOBN 132 2957 1 100 1400 1568
+        RCVD SCHD 132 4xlarge 0
+        job 132 (running) on 4xlarge 0 (active) SCHEDULED
+        job 132 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2958: job 31 on xlarge 0 COMPLETED
+        job 38 on xlarge 0 RUNNING
+        SENT JCPL 2958 31 xlarge 0
+        RCVD REDY
+        job 133 -- CPU: 6, Mem: 4100, Disk: 11000, Est Runtime: 10 SUBMITTED
+        SENT JOBN 133 2958 6 4100 11000 10
+        RCVD SCHD 133 4xlarge 0
+        job 133 (running) on 4xlarge 0 (active) SCHEDULED
+        job 133 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+        job 134 -- CPU: 1, Mem: 700, Disk: 500, Est Runtime: 88 SUBMITTED
+        SENT JOBN 134 2958 1 700 500 88
+        RCVD SCHD 134 4xlarge 0
+        job 134 (running) on 4xlarge 0 (active) SCHEDULED
+        job 134 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+        job 135 -- CPU: 2, Mem: 1600, Disk: 3600, Est Runtime: 75 SUBMITTED
+        SENT JOBN 135 2958 2 1600 3600 75
+        RCVD SCHD 135 4xlarge 0
+        job 135 (running) on 4xlarge 0 (active) SCHEDULED
+        job 135 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2959: job 136 -- CPU: 5, Mem: 3500, Disk: 7700, Est Runtime: 4 SUBMITTED
+        SENT JOBN 136 2959 5 3500 7700 4
+        RCVD SCHD 136 large 0
+        job 136 (waiting) on large 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2963: job 137 -- CPU: 1, Mem: 800, Disk: 400, Est Runtime: 462 SUBMITTED
+        SENT JOBN 137 2963 1 800 400 462
+        RCVD SCHD 137 4xlarge 0
+        job 137 (running) on 4xlarge 0 (active) SCHEDULED
+        job 137 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2965: job 138 -- CPU: 2, Mem: 1700, Disk: 3900, Est Runtime: 737 SUBMITTED
+        SENT JOBN 138 2965 2 1700 3900 737
+        RCVD SCHD 138 small 0
+        job 138 (waiting) on small 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2967: job 139 -- CPU: 1, Mem: 300, Disk: 1900, Est Runtime: 667 SUBMITTED
+        SENT JOBN 139 2967 1 300 1900 667
+        RCVD SCHD 139 tiny 0
+        job 139 (waiting) on tiny 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2968: job 124 on 4xlarge 0 COMPLETED
+        SENT JCPL 2968 124 4xlarge 0
+        RCVD REDY
+t 2969: job 129 on 4xlarge 0 COMPLETED
+        SENT JCPL 2969 129 4xlarge 0
+        RCVD REDY
+t 2971: job 140 -- CPU: 2, Mem: 1800, Disk: 500, Est Runtime: 1 SUBMITTED
+        SENT JOBN 140 2971 2 1800 500 1
+        RCVD SCHD 140 4xlarge 0
+        job 140 (running) on 4xlarge 0 (active) SCHEDULED
+        job 140 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2972: job 38 on xlarge 0 COMPLETED
+        job 128 on xlarge 0 RUNNING
+        SENT JCPL 2972 38 xlarge 0
+        RCVD REDY
+        job 141 -- CPU: 1, Mem: 800, Disk: 300, Est Runtime: 460 SUBMITTED
+        SENT JOBN 141 2972 1 800 300 460
+        RCVD SCHD 141 4xlarge 0
+        job 141 (running) on 4xlarge 0 (active) SCHEDULED
+        job 141 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2973: job 87 on 2xlarge 0 COMPLETED
+        SENT JCPL 2973 87 2xlarge 0
+        RCVD REDY
+        job 140 on 4xlarge 0 COMPLETED
+        SENT JCPL 2973 140 4xlarge 0
+        RCVD REDY
+        job 142 -- CPU: 15, Mem: 5300, Disk: 5100, Est Runtime: 20 SUBMITTED
+        SENT JOBN 142 2973 15 5300 5100 20
+        RCVD SCHD 142 xlarge 0
+        job 142 (waiting) on xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2976: job 143 -- CPU: 2, Mem: 1800, Disk: 2500, Est Runtime: 836 SUBMITTED
+        SENT JOBN 143 2976 2 1800 2500 836
+        RCVD SCHD 143 4xlarge 0
+        job 143 (running) on 4xlarge 0 (active) SCHEDULED
+        job 143 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2977: job 144 -- CPU: 4, Mem: 1500, Disk: 5300, Est Runtime: 13 SUBMITTED
+        SENT JOBN 144 2977 4 1500 5300 13
+        RCVD SCHD 144 medium 0
+        job 144 (waiting) on medium 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+        job 145 -- CPU: 4, Mem: 3200, Disk: 7200, Est Runtime: 7 SUBMITTED
+        SENT JOBN 145 2977 4 3200 7200 7
+        RCVD SCHD 145 medium 0
+        job 145 (waiting) on medium 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2979: job 54 on 2xlarge 0 COMPLETED
+        SENT JCPL 2979 54 2xlarge 0
+        RCVD REDY
+t 2980: job 130 on 4xlarge 0 COMPLETED
+        SENT JCPL 2980 130 4xlarge 0
+        RCVD REDY
+        job 146 -- CPU: 2, Mem: 500, Disk: 2000, Est Runtime: 3 SUBMITTED
+        SENT JOBN 146 2980 2 500 2000 3
+        RCVD SCHD 146 4xlarge 0
+        job 146 (running) on 4xlarge 0 (active) SCHEDULED
+        job 146 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+        job 147 -- CPU: 2, Mem: 1400, Disk: 3600, Est Runtime: 346 SUBMITTED
+        SENT JOBN 147 2980 2 1400 3600 346
+        RCVD SCHD 147 4xlarge 0
+        job 147 (running) on 4xlarge 0 (active) SCHEDULED
+        job 147 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2984: job 148 -- CPU: 8, Mem: 1600, Disk: 9600, Est Runtime: 43 SUBMITTED
+        SENT JOBN 148 2984 8 1600 9600 43
+        RCVD SCHD 148 large 0
+        job 148 (waiting) on large 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+        job 149 -- CPU: 2, Mem: 2000, Disk: 1000, Est Runtime: 40 SUBMITTED
+        SENT JOBN 149 2984 2 2000 1000 40
+        RCVD SCHD 149 4xlarge 0
+        job 149 (running) on 4xlarge 0 (active) SCHEDULED
+        job 149 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+        job 150 -- CPU: 1, Mem: 900, Disk: 1800, Est Runtime: 11 SUBMITTED
+        SENT JOBN 150 2984 1 900 1800 11
+        RCVD SCHD 150 4xlarge 0
+        job 150 (running) on 4xlarge 0 (active) SCHEDULED
+        job 150 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+        job 151 -- CPU: 2, Mem: 1200, Disk: 4000, Est Runtime: 237 SUBMITTED
+        SENT JOBN 151 2984 2 1200 4000 237
+        RCVD SCHD 151 small 0
+        job 151 (waiting) on small 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2986: job 152 -- CPU: 1, Mem: 200, Disk: 500, Est Runtime: 1 SUBMITTED
+        SENT JOBN 152 2986 1 200 500 1
+        RCVD SCHD 152 tiny 0
+        job 152 (waiting) on tiny 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2987: job 153 -- CPU: 11, Mem: 18600, Disk: 12100, Est Runtime: 683 SUBMITTED
+        SENT JOBN 153 2987 11 18600 12100 683
+        RCVD SCHD 153 xlarge 0
+        job 153 (waiting) on xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2989: job 154 -- CPU: 14, Mem: 6200, Disk: 11100, Est Runtime: 56 SUBMITTED
+        SENT JOBN 154 2989 14 6200 11100 56
+        RCVD SCHD 154 xlarge 0
+        job 154 (waiting) on xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2992: job 155 -- CPU: 29, Mem: 39900, Disk: 4400, Est Runtime: 54 SUBMITTED
+        SENT JOBN 155 2992 29 39900 4400 54
+        RCVD SCHD 155 2xlarge 0
+        job 155 (waiting) on 2xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2993: job 156 -- CPU: 2, Mem: 800, Disk: 4000, Est Runtime: 1590 SUBMITTED
+        SENT JOBN 156 2993 2 800 4000 1590
+        RCVD SCHD 156 small 0
+        job 156 (waiting) on small 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 2996: job 133 on 4xlarge 0 COMPLETED
+        SENT JCPL 2996 133 4xlarge 0
+        RCVD REDY
+        job 135 on 4xlarge 0 COMPLETED
+        SENT JCPL 2996 135 4xlarge 0
+        RCVD REDY
+t 2997: job 157 -- CPU: 1, Mem: 500, Disk: 300, Est Runtime: 2 SUBMITTED
+        SENT JOBN 157 2997 1 500 300 2
+        RCVD SCHD 157 4xlarge 0
+        job 157 (running) on 4xlarge 0 (active) SCHEDULED
+        job 157 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 3000: job 158 -- CPU: 7, Mem: 1500, Disk: 2700, Est Runtime: 3 SUBMITTED
+        SENT JOBN 158 3000 7 1500 2700 3
+        RCVD SCHD 158 4xlarge 0
+        job 158 (running) on 4xlarge 0 (active) SCHEDULED
+        job 158 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+        job 159 -- CPU: 8, Mem: 2000, Disk: 4800, Est Runtime: 26 SUBMITTED
+        SENT JOBN 159 3000 8 2000 4800 26
+        RCVD SCHD 159 large 0
+        job 159 (waiting) on large 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+        job 160 -- CPU: 87, Mem: 258700, Disk: 734800, Est Runtime: 1 SUBMITTED
+        SENT JOBN 160 3000 87 258700 734800 1
+        RCVD SCHD 160 16xlarge 0
+        job 160 (waiting) on 16xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3001: job 161 -- CPU: 17, Mem: 7400, Disk: 49600, Est Runtime: 380 SUBMITTED
+        SENT JOBN 161 3001 17 7400 49600 380
+        RCVD SCHD 161 2xlarge 0
+        job 161 (waiting) on 2xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3002: job 162 -- CPU: 2, Mem: 900, Disk: 800, Est Runtime: 26 SUBMITTED
+        SENT JOBN 162 3002 2 900 800 26
+        RCVD SCHD 162 small 0
+        job 162 (waiting) on small 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+        job 163 -- CPU: 19, Mem: 15900, Disk: 74100, Est Runtime: 2068 SUBMITTED
+        SENT JOBN 163 3002 19 15900 74100 2068
+        RCVD SCHD 163 2xlarge 0
+        job 163 (waiting) on 2xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3006: job 157 on 4xlarge 0 COMPLETED
+        SENT JCPL 3006 157 4xlarge 0
+        RCVD REDY
+t 3010: job 150 on 4xlarge 0 COMPLETED
+        SENT JCPL 3010 150 4xlarge 0
+        RCVD REDY
+t 3013: job 134 on 4xlarge 0 COMPLETED
+        SENT JCPL 3013 134 4xlarge 0
+        RCVD REDY
+        job 158 on 4xlarge 0 COMPLETED
+        SENT JCPL 3013 158 4xlarge 0
+        RCVD REDY
+t 3017: job 128 on xlarge 0 COMPLETED
+        job 142 on xlarge 0 RUNNING
+        SENT JCPL 3017 128 xlarge 0
+        RCVD REDY
+t 3021: job 149 on 4xlarge 0 COMPLETED
+        SENT JCPL 3021 149 4xlarge 0
+        RCVD REDY
+t 3031: job 164 -- CPU: 1, Mem: 600, Disk: 1600, Est Runtime: 9 SUBMITTED
+        SENT JOBN 164 3031 1 600 1600 9
+        RCVD SCHD 164 4xlarge 0
+        job 164 (running) on 4xlarge 0 (active) SCHEDULED
+        job 164 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 3038: job 165 -- CPU: 11, Mem: 11900, Disk: 20000, Est Runtime: 53 SUBMITTED
+        SENT JOBN 165 3038 11 11900 20000 53
+        RCVD SCHD 165 4xlarge 0
+        job 165 (running) on 4xlarge 0 (active) SCHEDULED
+        job 165 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 3043: job 166 -- CPU: 6, Mem: 1800, Disk: 3400, Est Runtime: 53 SUBMITTED
+        SENT JOBN 166 3043 6 1800 3400 53
+        RCVD SCHD 166 large 0
+        job 166 (waiting) on large 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3048: job 164 on 4xlarge 0 COMPLETED
+        SENT JCPL 3048 164 4xlarge 0
+        RCVD REDY
+t 3058: job 167 -- CPU: 7, Mem: 2200, Disk: 3300, Est Runtime: 6 SUBMITTED
+        SENT JOBN 167 3058 7 2200 3300 6
+        RCVD SCHD 167 large 0
+        job 167 (waiting) on large 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+        job 168 -- CPU: 1, Mem: 900, Disk: 1300, Est Runtime: 1298 SUBMITTED
+        SENT JOBN 168 3058 1 900 1300 1298
+        RCVD SCHD 168 4xlarge 0
+        job 168 (running) on 4xlarge 0 (active) SCHEDULED
+        job 168 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 3064: job 142 on xlarge 0 COMPLETED
+        job 153 on xlarge 0 RUNNING
+        SENT JCPL 3064 142 xlarge 0
+        RCVD REDY
+t 3067: job 169 -- CPU: 1, Mem: 300, Disk: 1000, Est Runtime: 25 SUBMITTED
+        SENT JOBN 169 3067 1 300 1000 25
+        RCVD SCHD 169 tiny 0
+        job 169 (waiting) on tiny 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3073: job 165 on 4xlarge 0 COMPLETED
+        SENT JCPL 3073 165 4xlarge 0
+        RCVD REDY
+t 3079: job 170 -- CPU: 4, Mem: 4000, Disk: 1300, Est Runtime: 106 SUBMITTED
+        SENT JOBN 170 3079 4 4000 1300 106
+        RCVD SCHD 170 4xlarge 0
+        job 170 (running) on 4xlarge 0 (active) SCHEDULED
+        job 170 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 3107: job 171 -- CPU: 1, Mem: 300, Disk: 1200, Est Runtime: 458 SUBMITTED
+        SENT JOBN 171 3107 1 300 1200 458
+        RCVD SCHD 171 4xlarge 0
+        job 171 (running) on 4xlarge 0 (active) SCHEDULED
+        job 171 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 3122: job 172 -- CPU: 1, Mem: 700, Disk: 500, Est Runtime: 1484 SUBMITTED
+        SENT JOBN 172 3122 1 700 500 1484
+        RCVD SCHD 172 4xlarge 0
+        job 172 (running) on 4xlarge 0 (active) SCHEDULED
+        job 172 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 3151: job 146 on 4xlarge 0 COMPLETED
+        SENT JCPL 3151 146 4xlarge 0
+        RCVD REDY
+t 3167: job 173 -- CPU: 31, Mem: 48100, Disk: 129200, Est Runtime: 11 SUBMITTED
+        SENT JOBN 173 3167 31 48100 129200 11
+        RCVD SCHD 173 2xlarge 0
+        job 173 (waiting) on 2xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3172: job 170 on 4xlarge 0 COMPLETED
+        SENT JCPL 3172 170 4xlarge 0
+        RCVD REDY
+t 3178: job 55 on 2xlarge 0 COMPLETED
+        SENT JCPL 3178 55 2xlarge 0
+        RCVD REDY
+t 3185: job 51 on 2xlarge 0 COMPLETED
+        SENT JCPL 3185 51 2xlarge 0
+        RCVD REDY
+t 3190: job 84 on small 0 COMPLETED
+        SENT JCPL 3190 84 small 0
+        RCVD REDY
+        job 147 on 4xlarge 0 COMPLETED
+        SENT JCPL 3190 147 4xlarge 0
+        RCVD REDY
+t 3191: job 174 -- CPU: 3, Mem: 500, Disk: 1300, Est Runtime: 40 SUBMITTED
+        SENT JOBN 174 3191 3 500 1300 40
+        RCVD SCHD 174 4xlarge 0
+        job 174 (running) on 4xlarge 0 (active) SCHEDULED
+        job 174 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 3209: job 175 -- CPU: 30, Mem: 25200, Disk: 88100, Est Runtime: 15 SUBMITTED
+        SENT JOBN 175 3209 30 25200 88100 15
+        RCVD SCHD 175 2xlarge 0
+        job 175 (waiting) on 2xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3217: job 176 -- CPU: 1, Mem: 100, Disk: 600, Est Runtime: 959 SUBMITTED
+        SENT JOBN 176 3217 1 100 600 959
+        RCVD SCHD 176 4xlarge 0
+        job 176 (running) on 4xlarge 0 (active) SCHEDULED
+        job 176 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 3228: job 174 on 4xlarge 0 COMPLETED
+        SENT JCPL 3228 174 4xlarge 0
+        RCVD REDY
+t 3285: job 177 -- CPU: 2, Mem: 1100, Disk: 2200, Est Runtime: 888 SUBMITTED
+        SENT JOBN 177 3285 2 1100 2200 888
+        RCVD SCHD 177 4xlarge 0
+        job 177 (running) on 4xlarge 0 (active) SCHEDULED
+        job 177 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 3303: job 178 -- CPU: 6, Mem: 700, Disk: 11300, Est Runtime: 281 SUBMITTED
+        SENT JOBN 178 3303 6 700 11300 281
+        RCVD SCHD 178 4xlarge 0
+        job 178 (running) on 4xlarge 0 (active) SCHEDULED
+        job 178 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 3324: job 120 on 4xlarge 0 COMPLETED
+        SENT JCPL 3324 120 4xlarge 0
+        RCVD REDY
+t 3343: job 179 -- CPU: 1, Mem: 100, Disk: 2000, Est Runtime: 741 SUBMITTED
+        SENT JOBN 179 3343 1 100 2000 741
+        RCVD SCHD 179 4xlarge 0
+        job 179 (running) on 4xlarge 0 (active) SCHEDULED
+        job 179 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 3349: job 40 on 16xlarge 0 COMPLETED
+        job 41 on 16xlarge 0 RUNNING
+        SENT JCPL 3349 40 16xlarge 0
+        RCVD REDY
+t 3361: job 77 on 2xlarge 0 COMPLETED
+        SENT JCPL 3361 77 2xlarge 0
+        RCVD REDY
+t 3364: job 115 on 4xlarge 0 COMPLETED
+        SENT JCPL 3364 115 4xlarge 0
+        RCVD REDY
+t 3365: job 180 -- CPU: 1, Mem: 900, Disk: 1700, Est Runtime: 122 SUBMITTED
+        SENT JOBN 180 3365 1 900 1700 122
+        RCVD SCHD 180 4xlarge 0
+        job 180 (running) on 4xlarge 0 (active) SCHEDULED
+        job 180 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 3401: job 181 -- CPU: 19, Mem: 27900, Disk: 9000, Est Runtime: 2792 SUBMITTED
+        SENT JOBN 181 3401 19 27900 9000 2792
+        RCVD SCHD 181 2xlarge 0
+        job 181 (waiting) on 2xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3442: job 182 -- CPU: 2, Mem: 400, Disk: 2700, Est Runtime: 1 SUBMITTED
+        SENT JOBN 182 3442 2 400 2700 1
+        RCVD SCHD 182 4xlarge 0
+        job 182 (running) on 4xlarge 0 (active) SCHEDULED
+        job 182 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 3445: job 182 on 4xlarge 0 COMPLETED
+        SENT JCPL 3445 182 4xlarge 0
+        RCVD REDY
+t 3468: job 119 on 4xlarge 0 COMPLETED
+        SENT JCPL 3468 119 4xlarge 0
+        RCVD REDY
+t 3476: job 34 on tiny 0 COMPLETED
+        job 35 on tiny 0 RUNNING
+        SENT JCPL 3476 34 tiny 0
+        RCVD REDY
+t 3481: job 183 -- CPU: 23, Mem: 10100, Disk: 122300, Est Runtime: 12 SUBMITTED
+        SENT JOBN 183 3481 23 10100 122300 12
+        RCVD SCHD 183 2xlarge 0
+        job 183 (waiting) on 2xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3515: job 184 -- CPU: 27, Mem: 35200, Disk: 36300, Est Runtime: 855 SUBMITTED
+        SENT JOBN 184 3515 27 35200 36300 855
+        RCVD SCHD 184 2xlarge 0
+        job 184 (waiting) on 2xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3516: job 141 on 4xlarge 0 COMPLETED
+        SENT JCPL 3516 141 4xlarge 0
+        RCVD REDY
+t 3519: job 108 on medium 0 COMPLETED
+        SENT JCPL 3519 108 medium 0
+        RCVD REDY
+t 3524: job 185 -- CPU: 13, Mem: 17500, Disk: 47800, Est Runtime: 603 SUBMITTED
+        SENT JOBN 185 3524 13 17500 47800 603
+        RCVD SCHD 185 4xlarge 0
+        job 185 (running) on 4xlarge 0 (active) SCHEDULED
+        job 185 on 4xlarge 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 3529: job 186 -- CPU: 8, Mem: 5900, Disk: 11100, Est Runtime: 28 SUBMITTED
+        SENT JOBN 186 3529 8 5900 11100 28
+        RCVD SCHD 186 large 0
+        job 186 (waiting) on large 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+        job 187 -- CPU: 45, Mem: 38300, Disk: 122700, Est Runtime: 1172 SUBMITTED
+        SENT JOBN 187 3529 45 38300 122700 1172
+        RCVD SCHD 187 4xlarge 0
+        job 187 (waiting) on 4xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+        job 188 -- CPU: 5, Mem: 3500, Disk: 3800, Est Runtime: 11 SUBMITTED
+        SENT JOBN 188 3529 5 3500 3800 11
+        RCVD SCHD 188 large 0
+        job 188 (waiting) on large 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3532: job 189 -- CPU: 1, Mem: 700, Disk: 1000, Est Runtime: 559 SUBMITTED
+        SENT JOBN 189 3532 1 700 1000 559
+        RCVD SCHD 189 tiny 0
+        job 189 (waiting) on tiny 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3533: job 190 -- CPU: 2, Mem: 1200, Disk: 2300, Est Runtime: 1473 SUBMITTED
+        SENT JOBN 190 3533 2 1200 2300 1473
+        RCVD SCHD 190 small 0
+        job 190 (waiting) on small 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3535: job 35 on tiny 0 COMPLETED
+        job 36 on tiny 0 RUNNING
+        SENT JCPL 3535 35 tiny 0
+        RCVD REDY
+        job 89 on 8xlarge 0 COMPLETED
+        job 90 on 8xlarge 0 RUNNING
+        SENT JCPL 3535 89 8xlarge 0
+        RCVD REDY
+        job 191 -- CPU: 2, Mem: 1000, Disk: 900, Est Runtime: 643 SUBMITTED
+        SENT JOBN 191 3535 2 1000 900 643
+        RCVD SCHD 191 small 0
+        job 191 (waiting) on small 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3537: job 82 on large 0 COMPLETED
+        SENT JCPL 3537 82 large 0
+        RCVD REDY
+        job 192 -- CPU: 2, Mem: 1700, Disk: 3100, Est Runtime: 40 SUBMITTED
+        SENT JOBN 192 3537 2 1700 3100 40
+        RCVD SCHD 192 small 0
+        job 192 (waiting) on small 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3541: job 193 -- CPU: 7, Mem: 5900, Disk: 14200, Est Runtime: 662 SUBMITTED
+        SENT JOBN 193 3541 7 5900 14200 662
+        RCVD SCHD 193 large 0
+        job 193 (waiting) on large 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3545: job 194 -- CPU: 1, Mem: 900, Disk: 2000, Est Runtime: 31 SUBMITTED
+        SENT JOBN 194 3545 1 900 2000 31
+        RCVD SCHD 194 tiny 0
+        job 194 (waiting) on tiny 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3547: job 195 -- CPU: 2, Mem: 2000, Disk: 4000, Est Runtime: 17 SUBMITTED
+        SENT JOBN 195 3547 2 2000 4000 17
+        RCVD SCHD 195 small 0
+        job 195 (waiting) on small 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3548: job 196 -- CPU: 1, Mem: 1000, Disk: 1800, Est Runtime: 784 SUBMITTED
+        SENT JOBN 196 3548 1 1000 1800 784
+        RCVD SCHD 196 tiny 0
+        job 196 (waiting) on tiny 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3550: job 197 -- CPU: 66, Mem: 144200, Disk: 892800, Est Runtime: 1823 SUBMITTED
+        SENT JOBN 197 3550 66 144200 892800 1823
+        RCVD SCHD 197 8xlarge 0
+        job 197 (waiting) on 8xlarge 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3552: job 198 -- CPU: 2, Mem: 300, Disk: 2100, Est Runtime: 1771 SUBMITTED
+        SENT JOBN 198 3552 2 300 2100 1771
+        RCVD SCHD 198 small 0
+        job 198 (waiting) on small 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3559: job 86 on 2xlarge 0 COMPLETED
+        SENT JCPL 3559 86 2xlarge 0
+        RCVD REDY
+t 3560: job 199 -- CPU: 2, Mem: 300, Disk: 2800, Est Runtime: 12 SUBMITTED
+        SENT JOBN 199 3560 2 300 2800 12
+        RCVD SCHD 199 small 0
+        job 199 (waiting) on small 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 3589: job 75 on 4xlarge 0 COMPLETED
+        SENT JCPL 3589 75 4xlarge 0
+        RCVD REDY
+t 3617: job 74 on 2xlarge 0 COMPLETED
+        job 116 on 2xlarge 0 RUNNING
+        SENT JCPL 3617 74 2xlarge 0
+        RCVD REDY
+t 3636: job 30 on large 0 COMPLETED
+        job 122 on large 0 RUNNING
+        SENT JCPL 3636 30 large 0
+        RCVD REDY
+t 3657: job 122 on large 0 COMPLETED
+        job 123 on large 0 RUNNING
+        SENT JCPL 3657 122 large 0
+        RCVD REDY
+t 3672: job 110 on 4xlarge 0 COMPLETED
+        SENT JCPL 3672 110 4xlarge 0
+        RCVD REDY
+t 3701: job 176 on 4xlarge 0 COMPLETED
+        SENT JCPL 3701 176 4xlarge 0
+        RCVD REDY
+t 3744: job 179 on 4xlarge 0 COMPLETED
+        SENT JCPL 3744 179 4xlarge 0
+        RCVD REDY
+t 3762: job 171 on 4xlarge 0 COMPLETED
+        SENT JCPL 3762 171 4xlarge 0
+        RCVD REDY
+t 3772: job 90 on 8xlarge 0 COMPLETED
+        job 99 on 8xlarge 0 RUNNING
+        SENT JCPL 3772 90 8xlarge 0
+        RCVD REDY
+t 3778: job 105 on 4xlarge 0 COMPLETED
+        SENT JCPL 3778 105 4xlarge 0
+        RCVD REDY
+t 3785: job 65 on small 0 COMPLETED
+        job 127 on small 0 RUNNING
+        SENT JCPL 3785 65 small 0
+        RCVD REDY
+t 3787: job 91 on 4xlarge 0 COMPLETED
+        SENT JCPL 3787 91 4xlarge 0
+        RCVD REDY
+t 3790: job 73 on 2xlarge 0 COMPLETED
+        SENT JCPL 3790 73 2xlarge 0
+        RCVD REDY
+t 3810: job 99 on 8xlarge 0 COMPLETED
+        job 197 on 8xlarge 0 RUNNING
+        SENT JCPL 3810 99 8xlarge 0
+        RCVD REDY
+t 3884: job 96 on 4xlarge 0 COMPLETED
+        SENT JCPL 3884 96 4xlarge 0
+        RCVD REDY
+t 3979: job 132 on 4xlarge 0 COMPLETED
+        SENT JCPL 3979 132 4xlarge 0
+        RCVD REDY
+t 4005: job 123 on large 0 COMPLETED
+        job 136 on large 0 RUNNING
+        SENT JCPL 4005 123 large 0
+        RCVD REDY
+t 4012: job 106 on 4xlarge 0 COMPLETED
+        SENT JCPL 4012 106 4xlarge 0
+        RCVD REDY
+t 4034: job 153 on xlarge 0 COMPLETED
+        job 154 on xlarge 0 RUNNING
+        SENT JCPL 4034 153 xlarge 0
+        RCVD REDY
+t 4044: job 72 on medium 0 COMPLETED
+        job 144 on medium 0 RUNNING
+        SENT JCPL 4044 72 medium 0
+        RCVD REDY
+t 4045: job 136 on large 0 COMPLETED
+        job 148 on large 0 RUNNING
+        SENT JCPL 4045 136 large 0
+        RCVD REDY
+t 4065: job 154 on xlarge 0 COMPLETED
+        SENT JCPL 4065 154 xlarge 0
+        RCVD REDY
+t 4069: job 144 on medium 0 COMPLETED
+        job 145 on medium 0 RUNNING
+        SENT JCPL 4069 144 medium 0
+        RCVD REDY
+t 4074: job 145 on medium 0 COMPLETED
+        SENT JCPL 4074 145 medium 0
+        RCVD REDY
+t 4082: job 148 on large 0 COMPLETED
+        job 159 on large 0 RUNNING
+        SENT JCPL 4082 148 large 0
+        RCVD REDY
+t 4108: job 159 on large 0 COMPLETED
+        job 166 on large 0 RUNNING
+        SENT JCPL 4108 159 large 0
+        RCVD REDY
+t 4142: job 166 on large 0 COMPLETED
+        job 167 on large 0 RUNNING
+        SENT JCPL 4142 166 large 0
+        RCVD REDY
+t 4169: job 167 on large 0 COMPLETED
+        job 186 on large 0 RUNNING
+        SENT JCPL 4169 167 large 0
+        RCVD REDY
+t 4173: job 185 on 4xlarge 0 COMPLETED
+        job 187 on 4xlarge 0 RUNNING
+        SENT JCPL 4173 185 4xlarge 0
+        RCVD REDY
+t 4209: job 126 on 4xlarge 0 COMPLETED
+        SENT JCPL 4209 126 4xlarge 0
+        RCVD REDY
+t 4214: job 114 on 4xlarge 0 COMPLETED
+        SENT JCPL 4214 114 4xlarge 0
+        RCVD REDY
+t 4221: job 178 on 4xlarge 0 COMPLETED
+        SENT JCPL 4221 178 4xlarge 0
+        RCVD REDY
+t 4224: job 186 on large 0 COMPLETED
+        job 188 on large 0 RUNNING
+        SENT JCPL 4224 186 large 0
+        RCVD REDY
+t 4241: job 188 on large 0 COMPLETED
+        job 193 on large 0 RUNNING
+        SENT JCPL 4241 188 large 0
+        RCVD REDY
+t 4250: job 97 on 4xlarge 0 COMPLETED
+        SENT JCPL 4250 97 4xlarge 0
+        RCVD REDY
+t 4309: job 143 on 4xlarge 0 COMPLETED
+        SENT JCPL 4309 143 4xlarge 0
+        RCVD REDY
+t 4467: job 168 on 4xlarge 0 COMPLETED
+        SENT JCPL 4467 168 4xlarge 0
+        RCVD REDY
+t 4547: job 172 on 4xlarge 0 COMPLETED
+        SENT JCPL 4547 172 4xlarge 0
+        RCVD REDY
+t 4551: job 36 on tiny 0 COMPLETED
+        job 139 on tiny 0 RUNNING
+        SENT JCPL 4551 36 tiny 0
+        RCVD REDY
+t 4603: job 137 on 4xlarge 0 COMPLETED
+        SENT JCPL 4603 137 4xlarge 0
+        RCVD REDY
+t 4619: job 180 on 4xlarge 0 COMPLETED
+        SENT JCPL 4619 180 4xlarge 0
+        RCVD REDY
+t 4779: job 197 on 8xlarge 0 COMPLETED
+        SENT JCPL 4779 197 8xlarge 0
+        RCVD REDY
+t 4979: job 177 on 4xlarge 0 COMPLETED
+        SENT JCPL 4979 177 4xlarge 0
+        RCVD REDY
+t 4994: job 139 on tiny 0 COMPLETED
+        job 152 on tiny 0 RUNNING
+        SENT JCPL 4994 139 tiny 0
+        RCVD REDY
+t 4995: job 152 on tiny 0 COMPLETED
+        job 169 on tiny 0 RUNNING
+        SENT JCPL 4995 152 tiny 0
+        RCVD REDY
+t 5001: job 116 on 2xlarge 0 COMPLETED
+        job 118 on 2xlarge 0 RUNNING
+        SENT JCPL 5001 116 2xlarge 0
+        RCVD REDY
+t 5017: job 169 on tiny 0 COMPLETED
+        job 189 on tiny 0 RUNNING
+        SENT JCPL 5017 169 tiny 0
+        RCVD REDY
+t 5050: job 118 on 2xlarge 0 COMPLETED
+        job 155 on 2xlarge 0 RUNNING
+        SENT JCPL 5050 118 2xlarge 0
+        RCVD REDY
+t 5057: job 41 on 16xlarge 0 COMPLETED
+        job 47 on 16xlarge 0 RUNNING
+        SENT JCPL 5057 41 16xlarge 0
+        RCVD REDY
+t 5086: job 155 on 2xlarge 0 COMPLETED
+        job 161 on 2xlarge 0 RUNNING
+        SENT JCPL 5086 155 2xlarge 0
+        RCVD REDY
+t 5274: job 127 on small 0 COMPLETED
+        job 138 on small 0 RUNNING
+        SENT JCPL 5274 127 small 0
+        RCVD REDY
+t 5276: job 187 on 4xlarge 0 COMPLETED
+        SENT JCPL 5276 187 4xlarge 0
+        RCVD REDY
+t 5668: job 138 on small 0 COMPLETED
+        job 151 on small 0 RUNNING
+        SENT JCPL 5668 138 small 0
+        RCVD REDY
+t 5736: job 193 on large 0 COMPLETED
+        SENT JCPL 5736 193 large 0
+        RCVD REDY
+t 6021: job 161 on 2xlarge 0 COMPLETED
+        job 163 on 2xlarge 0 RUNNING
+        SENT JCPL 6021 161 2xlarge 0
+        RCVD REDY
+t 6040: job 189 on tiny 0 COMPLETED
+        job 194 on tiny 0 RUNNING
+        SENT JCPL 6040 189 tiny 0
+        RCVD REDY
+t 6092: job 194 on tiny 0 COMPLETED
+        job 196 on tiny 0 RUNNING
+        SENT JCPL 6092 194 tiny 0
+        RCVD REDY
+t 6148: job 47 on 16xlarge 0 COMPLETED
+        job 81 on 16xlarge 0 RUNNING
+        SENT JCPL 6148 47 16xlarge 0
+        RCVD REDY
+t 6337: job 81 on 16xlarge 0 COMPLETED
+        job 98 on 16xlarge 0 RUNNING
+        SENT JCPL 6337 81 16xlarge 0
+        RCVD REDY
+t 6372: job 98 on 16xlarge 0 COMPLETED
+        job 101 on 16xlarge 0 RUNNING
+        SENT JCPL 6372 98 16xlarge 0
+        RCVD REDY
+t 6526: job 101 on 16xlarge 0 COMPLETED
+        job 113 on 16xlarge 0 RUNNING
+        SENT JCPL 6526 101 16xlarge 0
+        RCVD REDY
+t 6553: job 113 on 16xlarge 0 COMPLETED
+        job 125 on 16xlarge 0 RUNNING
+        SENT JCPL 6553 113 16xlarge 0
+        RCVD REDY
+t 6571: job 125 on 16xlarge 0 COMPLETED
+        job 131 on 16xlarge 0 RUNNING
+        SENT JCPL 6571 125 16xlarge 0
+        RCVD REDY
+t 6597: job 131 on 16xlarge 0 COMPLETED
+        job 160 on 16xlarge 0 RUNNING
+        SENT JCPL 6597 131 16xlarge 0
+        RCVD REDY
+t 6761: job 196 on tiny 0 COMPLETED
+        SENT JCPL 6761 196 tiny 0
+        RCVD REDY
+t 6882: job 151 on small 0 COMPLETED
+        job 156 on small 0 RUNNING
+        SENT JCPL 6882 151 small 0
+        RCVD REDY
+t 6991: job 160 on 16xlarge 0 COMPLETED
+        SENT JCPL 6991 160 16xlarge 0
+        RCVD REDY
+t 7585: job 163 on 2xlarge 0 COMPLETED
+        job 173 on 2xlarge 0 RUNNING
+        SENT JCPL 7585 163 2xlarge 0
+        RCVD REDY
+t 7637: job 173 on 2xlarge 0 COMPLETED
+        job 175 on 2xlarge 0 RUNNING
+        SENT JCPL 7637 173 2xlarge 0
+        RCVD REDY
+t 7660: job 175 on 2xlarge 0 COMPLETED
+        job 181 on 2xlarge 0 RUNNING
+        SENT JCPL 7660 175 2xlarge 0
+        RCVD REDY
+t 7963: job 156 on small 0 COMPLETED
+        job 162 on small 0 RUNNING
+        SENT JCPL 7963 156 small 0
+        RCVD REDY
+t 7984: job 162 on small 0 COMPLETED
+        job 190 on small 0 RUNNING
+        SENT JCPL 7984 162 small 0
+        RCVD REDY
+t 8803: job 190 on small 0 COMPLETED
+        job 191 on small 0 RUNNING
+        SENT JCPL 8803 190 small 0
+        RCVD REDY
+t 9243: job 181 on 2xlarge 0 COMPLETED
+        job 183 on 2xlarge 0 RUNNING
+        SENT JCPL 9243 181 2xlarge 0
+        RCVD REDY
+t 9250: job 183 on 2xlarge 0 COMPLETED
+        job 184 on 2xlarge 0 RUNNING
+        SENT JCPL 9250 183 2xlarge 0
+        RCVD REDY
+t 10190: job 191 on small 0 COMPLETED
+         job 192 on small 0 RUNNING
+         SENT JCPL 10190 191 small 0
+         RCVD REDY
+t 10216: job 192 on small 0 COMPLETED
+         job 195 on small 0 RUNNING
+         SENT JCPL 10216 192 small 0
+         RCVD REDY
+t 10226: job 195 on small 0 COMPLETED
+         job 198 on small 0 RUNNING
+         SENT JCPL 10226 195 small 0
+         RCVD REDY
+t 10280: job 184 on 2xlarge 0 COMPLETED
+         SENT JCPL 10280 184 2xlarge 0
+         RCVD REDY
+t 11684: job 198 on small 0 COMPLETED
+         job 199 on small 0 RUNNING
+         SENT JCPL 11684 198 small 0
+         RCVD REDY
+t 11697: job 199 on small 0 COMPLETED
+         SENT JCPL 11697 199 small 0
+         RCVD REDY
+         SENT NONE
+         RCVD QUIT
+         SENT QUIT
+# -------------------------------------------------------------------------------------
+# 1 tiny servers used with a utilisation of 100.00 at the cost of $0.18
+# 1 small servers used with a utilisation of 97.58 at the cost of $0.64
+# 1 medium servers used with a utilisation of 87.20 at the cost of $0.44
+# 1 large servers used with a utilisation of 99.80 at the cost of $1.25
+# 1 xlarge servers used with a utilisation of 100.00 at the cost of $1.72
+# 1 2xlarge servers used with a utilisation of 91.46 at the cost of $8.93
+# 1 4xlarge servers used with a utilisation of 84.96 at the cost of $8.94
+# 1 8xlarge servers used with a utilisation of 73.66 at the cost of $16.04
+# 1 16xlarge servers used with a utilisation of 100.00 at the cost of $47.72
+# ==================================== [ Summary ] ====================================
+# actual simulation end time: 11697, #jobs: 200 (failed 0 times)
+# total #servers used: 9, avg util: 92.74% (ef. usage: 93.78%), total cost: $85.86
+# avg waiting time: 918, avg exec time: 459, avg turnaround time: 1377

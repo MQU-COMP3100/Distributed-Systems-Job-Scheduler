@@ -1,0 +1,1023 @@
+# ds-sim server 2-Apr, 2026 @ MQ
+# Server-side simulator started with './ds-server -n -c configs/stage2/s2-config04.xml -v brief'
+# Waiting for connection to port 50000 of IP address 127.0.0.1
+RCVD HELO
+SENT OK
+RCVD AUTH chicken
+# Welcome  chicken!
+# The system information can be read from 'ds-system.xml'
+SENT OK
+RCVD REDY
+t 37: job 0 -- CPU: 5, Mem: 1200, Disk: 6400, Est Runtime: 1135 SUBMITTED
+      SENT JOBN 0 37 5 1200 6400 1135
+      RCVD SCHD 0 MQ_Cloud_large 0
+      job 0 (waiting) on MQ_Cloud_large 0 (booting) SCHEDULED
+      SENT OK
+      RCVD REDY
+t 60: job 1 -- CPU: 2, Mem: 1500, Disk: 2900, Est Runtime: 597 SUBMITTED
+      SENT JOBN 1 60 2 1500 2900 597
+      RCVD SCHD 1 small 0
+      job 1 (waiting) on small 0 (booting) SCHEDULED
+      SENT OK
+      RCVD REDY
+t 96: job 2 -- CPU: 4, Mem: 3100, Disk: 4200, Est Runtime: 1441 SUBMITTED
+      SENT JOBN 2 96 4 3100 4200 1441
+      RCVD SCHD 2 medium 0
+      job 2 (waiting) on medium 0 (booting) SCHEDULED
+      SENT OK
+      RCVD REDY
+t 101: job 3 -- CPU: 4, Mem: 1800, Disk: 5100, Est Runtime: 954 SUBMITTED
+       SENT JOBN 3 101 4 1800 5100 954
+       RCVD SCHD 3 medium 1
+       job 3 (waiting) on medium 1 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 107: job 0 on MQ_Cloud_large 0 RUNNING
+t 120: job 1 on small 0 RUNNING
+t 137: job 4 -- CPU: 1, Mem: 100, Disk: 2000, Est Runtime: 5 SUBMITTED
+       SENT JOBN 4 137 1 100 2000 5
+       RCVD SCHD 4 small 1
+       job 4 (waiting) on small 1 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 141: job 5 -- CPU: 5, Mem: 4500, Disk: 4400, Est Runtime: 131 SUBMITTED
+       SENT JOBN 5 141 5 4500 4400 131
+       RCVD SCHD 5 MQ_Cloud_large 1
+       job 5 (waiting) on MQ_Cloud_large 1 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 153: job 6 -- CPU: 8, Mem: 8100, Disk: 15300, Est Runtime: 836 SUBMITTED
+       SENT JOBN 6 153 8 8100 15300 836
+       RCVD SCHD 6 large 0
+       job 6 (waiting) on large 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 156: job 2 on medium 0 RUNNING
+t 161: job 3 on medium 1 RUNNING
+t 165: job 7 -- CPU: 2, Mem: 500, Disk: 2100, Est Runtime: 344 SUBMITTED
+       SENT JOBN 7 165 2 500 2100 344
+       RCVD SCHD 7 MQ_Cloud_large 0
+       job 7 (running) on MQ_Cloud_large 0 (active) SCHEDULED
+       job 7 on MQ_Cloud_large 0 RUNNING
+       SENT OK
+       RCVD REDY
+t 169: job 8 -- CPU: 1, Mem: 100, Disk: 800, Est Runtime: 235 SUBMITTED
+       SENT JOBN 8 169 1 100 800 235
+       RCVD SCHD 8 MQ_Cloud_large 0
+       job 8 (running) on MQ_Cloud_large 0 (active) SCHEDULED
+       job 8 on MQ_Cloud_large 0 RUNNING
+       SENT OK
+       RCVD REDY
+       job 9 -- CPU: 2, Mem: 600, Disk: 1500, Est Runtime: 591 SUBMITTED
+       SENT JOBN 9 169 2 600 1500 591
+       RCVD SCHD 9 large 1
+       job 9 (waiting) on large 1 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 171: job 10 -- CPU: 3, Mem: 300, Disk: 4800, Est Runtime: 315 SUBMITTED
+       SENT JOBN 10 171 3 300 4800 315
+       RCVD SCHD 10 very_very_large 0
+       job 10 (waiting) on very_very_large 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 173: job 11 -- CPU: 1, Mem: 500, Disk: 600, Est Runtime: 26 SUBMITTED
+       SENT JOBN 11 173 1 500 600 26
+       RCVD SCHD 11 very_very_large 1
+       job 11 (waiting) on very_very_large 1 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 175: job 12 -- CPU: 3, Mem: 2100, Disk: 1300, Est Runtime: 5 SUBMITTED
+       SENT JOBN 12 175 3 2100 1300 5
+       RCVD SCHD 12 medium 0
+       job 12 (waiting) on medium 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 177: job 13 -- CPU: 5, Mem: 3300, Disk: 900, Est Runtime: 149 SUBMITTED
+       SENT JOBN 13 177 5 3300 900 149
+       RCVD SCHD 13 MQ_Cloud_large 0
+       job 13 (waiting) on MQ_Cloud_large 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+       job 14 -- CPU: 8, Mem: 7000, Disk: 7900, Est Runtime: 31 SUBMITTED
+       SENT JOBN 14 177 8 7000 7900 31
+       RCVD SCHD 14 MQ_Cloud_large 0
+       job 14 (waiting) on MQ_Cloud_large 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 180: job 15 -- CPU: 2, Mem: 2000, Disk: 3500, Est Runtime: 467 SUBMITTED
+       SENT JOBN 15 180 2 2000 3500 467
+       RCVD SCHD 15 small 0
+       job 15 (waiting) on small 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 181: job 16 -- CPU: 2, Mem: 1300, Disk: 1200, Est Runtime: 2648 SUBMITTED
+       SENT JOBN 16 181 2 1300 1200 2648
+       RCVD SCHD 16 small 0
+       job 16 (waiting) on small 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 185: job 17 -- CPU: 14, Mem: 13400, Disk: 25400, Est Runtime: 1440 SUBMITTED
+       SENT JOBN 17 185 14 13400 25400 1440
+       RCVD SCHD 17 large 0
+       job 17 (waiting) on large 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 187: job 18 -- CPU: 6, Mem: 4800, Disk: 9600, Est Runtime: 5 SUBMITTED
+       SENT JOBN 18 187 6 4800 9600 5
+       RCVD SCHD 18 MQ_Cloud_large 0
+       job 18 (waiting) on MQ_Cloud_large 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 190: job 19 -- CPU: 8, Mem: 6000, Disk: 4500, Est Runtime: 292 SUBMITTED
+       SENT JOBN 19 190 8 6000 4500 292
+       RCVD SCHD 19 MQ_Cloud_large 0
+       job 19 (waiting) on MQ_Cloud_large 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 194: job 20 -- CPU: 7, Mem: 7200, Disk: 12000, Est Runtime: 52 SUBMITTED
+       SENT JOBN 20 194 7 7200 12000 52
+       RCVD SCHD 20 MQ_Cloud_large 0
+       job 20 (waiting) on MQ_Cloud_large 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 197: job 4 on small 1 RUNNING
+t 202: job 21 -- CPU: 7, Mem: 1200, Disk: 6600, Est Runtime: 253 SUBMITTED
+       SENT JOBN 21 202 7 1200 6600 253
+       RCVD SCHD 21 MQ_Cloud_large 0
+       job 21 (waiting) on MQ_Cloud_large 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 211: job 5 on MQ_Cloud_large 1 RUNNING
+       job 22 -- CPU: 6, Mem: 1700, Disk: 1300, Est Runtime: 715 SUBMITTED
+       SENT JOBN 22 211 6 1700 1300 715
+       RCVD SCHD 22 MQ_Cloud_large 0
+       job 22 (waiting) on MQ_Cloud_large 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 216: job 23 -- CPU: 4, Mem: 1100, Disk: 3800, Est Runtime: 4827 SUBMITTED
+       SENT JOBN 23 216 4 1100 3800 4827
+       RCVD SCHD 23 medium 0
+       job 23 (waiting) on medium 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 220: job 24 -- CPU: 63, Mem: 256000, Disk: 467200, Est Runtime: 1005 SUBMITTED
+       SENT JOBN 24 220 63 256000 467200 1005
+       RCVD SCHD 24 very_very_large 0
+       job 24 (waiting) on very_very_large 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 233: job 6 on large 0 RUNNING
+t 249: job 9 on large 1 RUNNING
+t 291: job 10 on very_very_large 0 RUNNING
+t 293: job 11 on very_very_large 1 RUNNING
+t 305: job 4 on small 1 COMPLETED
+       SENT JCPL 305 4 small 1
+       RCVD REDY
+t 370: job 5 on MQ_Cloud_large 1 COMPLETED
+       SENT JCPL 370 5 MQ_Cloud_large 1
+       RCVD REDY
+t 388: job 8 on MQ_Cloud_large 0 COMPLETED
+       SENT JCPL 388 8 MQ_Cloud_large 0
+       RCVD REDY
+t 447: job 11 on very_very_large 1 COMPLETED
+       SENT JCPL 447 11 very_very_large 1
+       RCVD REDY
+t 451: job 10 on very_very_large 0 COMPLETED
+       job 24 on very_very_large 0 RUNNING
+       SENT JCPL 451 10 very_very_large 0
+       RCVD REDY
+t 454: job 7 on MQ_Cloud_large 0 COMPLETED
+       SENT JCPL 454 7 MQ_Cloud_large 0
+       RCVD REDY
+t 506: job 25 -- CPU: 2, Mem: 1500, Disk: 3700, Est Runtime: 758 SUBMITTED
+       SENT JOBN 25 506 2 1500 3700 758
+       RCVD SCHD 25 small 1
+       job 25 (running) on small 1 (active) SCHEDULED
+       job 25 on small 1 RUNNING
+       SENT OK
+       RCVD REDY
+t 546: job 9 on large 1 COMPLETED
+       SENT JCPL 546 9 large 1
+       RCVD REDY
+t 579: job 26 -- CPU: 2, Mem: 1400, Disk: 1200, Est Runtime: 43 SUBMITTED
+       SENT JOBN 26 579 2 1400 1200 43
+       RCVD SCHD 26 MQ_Cloud_large 1
+       job 26 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+       job 26 on MQ_Cloud_large 1 RUNNING
+       SENT OK
+       RCVD REDY
+t 605: job 27 -- CPU: 4, Mem: 2800, Disk: 5200, Est Runtime: 33 SUBMITTED
+       SENT JOBN 27 605 4 2800 5200 33
+       RCVD SCHD 27 MQ_Cloud_large 1
+       job 27 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+       job 27 on MQ_Cloud_large 1 RUNNING
+       SENT OK
+       RCVD REDY
+t 666: job 26 on MQ_Cloud_large 1 COMPLETED
+       SENT JCPL 666 26 MQ_Cloud_large 1
+       RCVD REDY
+t 671: job 28 -- CPU: 6, Mem: 5100, Disk: 1300, Est Runtime: 1142 SUBMITTED
+       SENT JOBN 28 671 6 5100 1300 1142
+       RCVD SCHD 28 large 1
+       job 28 (running) on large 1 (active) SCHEDULED
+       job 28 on large 1 RUNNING
+       SENT OK
+       RCVD REDY
+t 674: job 1 on small 0 COMPLETED
+       job 15 on small 0 RUNNING
+       SENT JCPL 674 1 small 0
+       RCVD REDY
+t 685: job 27 on MQ_Cloud_large 1 COMPLETED
+       SENT JCPL 685 27 MQ_Cloud_large 1
+       RCVD REDY
+t 742: job 29 -- CPU: 1, Mem: 100, Disk: 200, Est Runtime: 1378 SUBMITTED
+       SENT JOBN 29 742 1 100 200 1378
+       RCVD SCHD 29 MQ_Cloud_large 1
+       job 29 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+       job 29 on MQ_Cloud_large 1 RUNNING
+       SENT OK
+       RCVD REDY
+t 771: job 30 -- CPU: 1, Mem: 600, Disk: 1300, Est Runtime: 6 SUBMITTED
+       SENT JOBN 30 771 1 600 1300 6
+       RCVD SCHD 30 MQ_Cloud_large 1
+       job 30 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+       job 30 on MQ_Cloud_large 1 RUNNING
+       SENT OK
+       RCVD REDY
+t 861: job 31 -- CPU: 1, Mem: 700, Disk: 1300, Est Runtime: 13 SUBMITTED
+       SENT JOBN 31 861 1 700 1300 13
+       RCVD SCHD 31 MQ_Cloud_large 1
+       job 31 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+       job 31 on MQ_Cloud_large 1 RUNNING
+       SENT OK
+       RCVD REDY
+t 875: job 31 on MQ_Cloud_large 1 COMPLETED
+       SENT JCPL 875 31 MQ_Cloud_large 1
+       RCVD REDY
+t 905: job 32 -- CPU: 8, Mem: 2200, Disk: 16000, Est Runtime: 2462 SUBMITTED
+       SENT JOBN 32 905 8 2200 16000 2462
+       RCVD SCHD 32 large 1
+       job 32 (running) on large 1 (active) SCHEDULED
+       job 32 on large 1 RUNNING
+       SENT OK
+       RCVD REDY
+t 915: job 33 -- CPU: 13, Mem: 2000, Disk: 23000, Est Runtime: 28 SUBMITTED
+       SENT JOBN 33 915 13 2000 23000 28
+       RCVD SCHD 33 very_very_large 1
+       job 33 (running) on very_very_large 1 (active) SCHEDULED
+       job 33 on very_very_large 1 RUNNING
+       SENT OK
+       RCVD REDY
+t 920: job 34 -- CPU: 12, Mem: 12200, Disk: 20900, Est Runtime: 138 SUBMITTED
+       SENT JOBN 34 920 12 12200 20900 138
+       RCVD SCHD 34 very_very_large 1
+       job 34 (running) on very_very_large 1 (active) SCHEDULED
+       job 34 on very_very_large 1 RUNNING
+       SENT OK
+       RCVD REDY
+t 926: job 30 on MQ_Cloud_large 1 COMPLETED
+       SENT JCPL 926 30 MQ_Cloud_large 1
+       RCVD REDY
+t 982: job 25 on small 1 COMPLETED
+       SENT JCPL 982 25 small 1
+       RCVD REDY
+t 996: job 6 on large 0 COMPLETED
+       job 17 on large 0 RUNNING
+       SENT JCPL 996 6 large 0
+       RCVD REDY
+t 999: job 35 -- CPU: 3, Mem: 1700, Disk: 2400, Est Runtime: 78 SUBMITTED
+       SENT JOBN 35 999 3 1700 2400 78
+       RCVD SCHD 35 MQ_Cloud_large 1
+       job 35 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+       job 35 on MQ_Cloud_large 1 RUNNING
+       SENT OK
+       RCVD REDY
+t 1034: job 24 on very_very_large 0 COMPLETED
+        SENT JCPL 1034 24 very_very_large 0
+        RCVD REDY
+t 1041: job 36 -- CPU: 1, Mem: 400, Disk: 1800, Est Runtime: 45 SUBMITTED
+        SENT JOBN 36 1041 1 400 1800 45
+        RCVD SCHD 36 small 1
+        job 36 (running) on small 1 (active) SCHEDULED
+        job 36 on small 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1045: job 33 on very_very_large 1 COMPLETED
+        SENT JCPL 1045 33 very_very_large 1
+        RCVD REDY
+t 1055: job 34 on very_very_large 1 COMPLETED
+        SENT JCPL 1055 34 very_very_large 1
+        RCVD REDY
+t 1072: job 35 on MQ_Cloud_large 1 COMPLETED
+        SENT JCPL 1072 35 MQ_Cloud_large 1
+        RCVD REDY
+t 1085: job 37 -- CPU: 4, Mem: 1900, Disk: 8200, Est Runtime: 915 SUBMITTED
+        SENT JOBN 37 1085 4 1900 8200 915
+        RCVD SCHD 37 MQ_Cloud_large 1
+        job 37 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+        job 37 on MQ_Cloud_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1095: job 38 -- CPU: 6, Mem: 3400, Disk: 6000, Est Runtime: 191 SUBMITTED
+        SENT JOBN 38 1095 6 3400 6000 191
+        RCVD SCHD 38 very_very_large 1
+        job 38 (running) on very_very_large 1 (active) SCHEDULED
+        job 38 on very_very_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1123: job 39 -- CPU: 4, Mem: 4300, Disk: 4200, Est Runtime: 339 SUBMITTED
+        SENT JOBN 39 1123 4 4300 4200 339
+        RCVD SCHD 39 very_very_large 1
+        job 39 (running) on very_very_large 1 (active) SCHEDULED
+        job 39 on very_very_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1137: job 36 on small 1 COMPLETED
+        SENT JCPL 1137 36 small 1
+        RCVD REDY
+t 1146: job 40 -- CPU: 6, Mem: 700, Disk: 2300, Est Runtime: 35 SUBMITTED
+        SENT JOBN 40 1146 6 700 2300 35
+        RCVD SCHD 40 very_very_large 1
+        job 40 (running) on very_very_large 1 (active) SCHEDULED
+        job 40 on very_very_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1160: job 41 -- CPU: 13, Mem: 14400, Disk: 3900, Est Runtime: 759 SUBMITTED
+        SENT JOBN 41 1160 13 14400 3900 759
+        RCVD SCHD 41 very_very_large 1
+        job 41 (running) on very_very_large 1 (active) SCHEDULED
+        job 41 on very_very_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1167: job 15 on small 0 COMPLETED
+        job 16 on small 0 RUNNING
+        SENT JCPL 1167 15 small 0
+        RCVD REDY
+t 1210: job 42 -- CPU: 13, Mem: 19500, Disk: 43200, Est Runtime: 475 SUBMITTED
+        SENT JOBN 42 1210 13 19500 43200 475
+        RCVD SCHD 42 very_very_large 1
+        job 42 (running) on very_very_large 1 (active) SCHEDULED
+        job 42 on very_very_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1221: job 43 -- CPU: 4, Mem: 2400, Disk: 6400, Est Runtime: 86 SUBMITTED
+        SENT JOBN 43 1221 4 2400 6400 86
+        RCVD SCHD 43 very_very_large 1
+        job 43 (running) on very_very_large 1 (active) SCHEDULED
+        job 43 on very_very_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1227: job 44 -- CPU: 5, Mem: 1900, Disk: 4900, Est Runtime: 168 SUBMITTED
+        SENT JOBN 44 1227 5 1900 4900 168
+        RCVD SCHD 44 very_very_large 1
+        job 44 (running) on very_very_large 1 (active) SCHEDULED
+        job 44 on very_very_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1271: job 45 -- CPU: 1, Mem: 900, Disk: 1500, Est Runtime: 27 SUBMITTED
+        SENT JOBN 45 1271 1 900 1500 27
+        RCVD SCHD 45 small 1
+        job 45 (running) on small 1 (active) SCHEDULED
+        job 45 on small 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1304: job 46 -- CPU: 4, Mem: 4200, Disk: 6800, Est Runtime: 7 SUBMITTED
+        SENT JOBN 46 1304 4 4200 6800 7
+        RCVD SCHD 46 very_very_large 1
+        job 46 (running) on very_very_large 1 (active) SCHEDULED
+        job 46 on very_very_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1313: job 45 on small 1 COMPLETED
+        SENT JCPL 1313 45 small 1
+        RCVD REDY
+t 1325: job 0 on MQ_Cloud_large 0 COMPLETED
+        job 13 on MQ_Cloud_large 0 RUNNING
+        SENT JCPL 1325 0 MQ_Cloud_large 0
+        RCVD REDY
+t 1326: job 46 on very_very_large 1 COMPLETED
+        SENT JCPL 1326 46 very_very_large 1
+        RCVD REDY
+t 1335: job 40 on very_very_large 1 COMPLETED
+        SENT JCPL 1335 40 very_very_large 1
+        RCVD REDY
+t 1336: job 44 on very_very_large 1 COMPLETED
+        SENT JCPL 1336 44 very_very_large 1
+        RCVD REDY
+t 1362: job 47 -- CPU: 27, Mem: 19600, Disk: 104500, Est Runtime: 149 SUBMITTED
+        SENT JOBN 47 1362 27 19600 104500 149
+        RCVD SCHD 47 very_very_large 0
+        job 47 (running) on very_very_large 0 (active) SCHEDULED
+        job 47 on very_very_large 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 1368: job 43 on very_very_large 1 COMPLETED
+        SENT JCPL 1368 43 very_very_large 1
+        RCVD REDY
+t 1413: job 38 on very_very_large 1 COMPLETED
+        SENT JCPL 1413 38 very_very_large 1
+        RCVD REDY
+t 1435: job 39 on very_very_large 1 COMPLETED
+        SENT JCPL 1435 39 very_very_large 1
+        RCVD REDY
+t 1460: job 48 -- CPU: 1, Mem: 800, Disk: 600, Est Runtime: 387 SUBMITTED
+        SENT JOBN 48 1460 1 800 600 387
+        RCVD SCHD 48 small 1
+        job 48 (running) on small 1 (active) SCHEDULED
+        job 48 on small 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1540: job 47 on very_very_large 0 COMPLETED
+        SENT JCPL 1540 47 very_very_large 0
+        RCVD REDY
+t 1568: job 49 -- CPU: 12, Mem: 16500, Disk: 3800, Est Runtime: 68 SUBMITTED
+        SENT JOBN 49 1568 12 16500 3800 68
+        RCVD SCHD 49 very_very_large 1
+        job 49 (running) on very_very_large 1 (active) SCHEDULED
+        job 49 on very_very_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1603: job 50 -- CPU: 4, Mem: 800, Disk: 3000, Est Runtime: 27 SUBMITTED
+        SENT JOBN 50 1603 4 800 3000 27
+        RCVD SCHD 50 very_very_large 1
+        job 50 (running) on very_very_large 1 (active) SCHEDULED
+        job 50 on very_very_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1623: job 49 on very_very_large 1 COMPLETED
+        SENT JCPL 1623 49 very_very_large 1
+        RCVD REDY
+t 1640: job 51 -- CPU: 44, Mem: 38500, Disk: 21500, Est Runtime: 397 SUBMITTED
+        SENT JOBN 51 1640 44 38500 21500 397
+        RCVD SCHD 51 very_very_large 0
+        job 51 (running) on very_very_large 0 (active) SCHEDULED
+        job 51 on very_very_large 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 1679: job 52 -- CPU: 1, Mem: 400, Disk: 2000, Est Runtime: 128 SUBMITTED
+        SENT JOBN 52 1679 1 400 2000 128
+        RCVD SCHD 52 small 1
+        job 52 (running) on small 1 (active) SCHEDULED
+        job 52 on small 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1681: job 37 on MQ_Cloud_large 1 COMPLETED
+        SENT JCPL 1681 37 MQ_Cloud_large 1
+        RCVD REDY
+        job 53 -- CPU: 2, Mem: 1800, Disk: 2700, Est Runtime: 253 SUBMITTED
+        SENT JOBN 53 1681 2 1800 2700 253
+        RCVD SCHD 53 MQ_Cloud_large 1
+        job 53 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+        job 53 on MQ_Cloud_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1691: job 54 -- CPU: 1, Mem: 100, Disk: 1000, Est Runtime: 5 SUBMITTED
+        SENT JOBN 54 1691 1 100 1000 5
+        RCVD SCHD 54 MQ_Cloud_large 1
+        job 54 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+        job 54 on MQ_Cloud_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1703: job 54 on MQ_Cloud_large 1 COMPLETED
+        SENT JCPL 1703 54 MQ_Cloud_large 1
+        RCVD REDY
+t 1726: job 3 on medium 1 COMPLETED
+        SENT JCPL 1726 3 medium 1
+        RCVD REDY
+t 1729: job 13 on MQ_Cloud_large 0 COMPLETED
+        job 14 on MQ_Cloud_large 0 RUNNING
+        SENT JCPL 1729 13 MQ_Cloud_large 0
+        RCVD REDY
+t 1741: job 55 -- CPU: 3, Mem: 800, Disk: 4600, Est Runtime: 172 SUBMITTED
+        SENT JOBN 55 1741 3 800 4600 172
+        RCVD SCHD 55 medium 1
+        job 55 (running) on medium 1 (active) SCHEDULED
+        job 55 on medium 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1758: job 41 on very_very_large 1 COMPLETED
+        SENT JCPL 1758 41 very_very_large 1
+        RCVD REDY
+t 1762: job 14 on MQ_Cloud_large 0 COMPLETED
+        job 18 on MQ_Cloud_large 0 RUNNING
+        SENT JCPL 1762 14 MQ_Cloud_large 0
+        RCVD REDY
+t 1780: job 50 on very_very_large 1 COMPLETED
+        SENT JCPL 1780 50 very_very_large 1
+        RCVD REDY
+t 1791: job 56 -- CPU: 33, Mem: 125200, Disk: 84200, Est Runtime: 4 SUBMITTED
+        SENT JOBN 56 1791 33 125200 84200 4
+        RCVD SCHD 56 very_very_large 1
+        job 56 (running) on very_very_large 1 (active) SCHEDULED
+        job 56 on very_very_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1798: job 56 on very_very_large 1 COMPLETED
+        SENT JCPL 1798 56 very_very_large 1
+        RCVD REDY
+t 1803: job 57 -- CPU: 62, Mem: 256000, Disk: 14000, Est Runtime: 20 SUBMITTED
+        SENT JOBN 57 1803 62 256000 14000 20
+        RCVD SCHD 57 very_very_large 0
+        job 57 (waiting) on very_very_large 0 (active) SCHEDULED
+        SENT OK
+        RCVD REDY
+t 1809: job 18 on MQ_Cloud_large 0 COMPLETED
+        job 19 on MQ_Cloud_large 0 RUNNING
+        SENT JCPL 1809 18 MQ_Cloud_large 0
+        RCVD REDY
+t 1856: job 55 on medium 1 COMPLETED
+        SENT JCPL 1856 55 medium 1
+        RCVD REDY
+t 1877: job 53 on MQ_Cloud_large 1 COMPLETED
+        SENT JCPL 1877 53 MQ_Cloud_large 1
+        RCVD REDY
+        job 58 -- CPU: 3, Mem: 1100, Disk: 5100, Est Runtime: 2208 SUBMITTED
+        SENT JOBN 58 1877 3 1100 5100 2208
+        RCVD SCHD 58 medium 1
+        job 58 (running) on medium 1 (active) SCHEDULED
+        job 58 on medium 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1910: job 59 -- CPU: 2, Mem: 1800, Disk: 1500, Est Runtime: 86 SUBMITTED
+        SENT JOBN 59 1910 2 1800 1500 86
+        RCVD SCHD 59 MQ_Cloud_large 1
+        job 59 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+        job 59 on MQ_Cloud_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1944: job 2 on medium 0 COMPLETED
+        job 12 on medium 0 RUNNING
+        SENT JCPL 1944 2 medium 0
+        RCVD REDY
+t 1950: job 12 on medium 0 COMPLETED
+        job 23 on medium 0 RUNNING
+        SENT JCPL 1950 12 medium 0
+        RCVD REDY
+t 1966: job 48 on small 1 COMPLETED
+        SENT JCPL 1966 48 small 1
+        RCVD REDY
+t 1977: job 60 -- CPU: 3, Mem: 400, Disk: 5400, Est Runtime: 2 SUBMITTED
+        SENT JOBN 60 1977 3 400 5400 2
+        RCVD SCHD 60 MQ_Cloud_large 1
+        job 60 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+        job 60 on MQ_Cloud_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1985: job 61 -- CPU: 2, Mem: 700, Disk: 2300, Est Runtime: 111 SUBMITTED
+        SENT JOBN 61 1985 2 700 2300 111
+        RCVD SCHD 61 MQ_Cloud_large 1
+        job 61 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+        job 61 on MQ_Cloud_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1988: job 60 on MQ_Cloud_large 1 COMPLETED
+        SENT JCPL 1988 60 MQ_Cloud_large 1
+        RCVD REDY
+t 1993: job 59 on MQ_Cloud_large 1 COMPLETED
+        SENT JCPL 1993 59 MQ_Cloud_large 1
+        RCVD REDY
+t 2034: job 62 -- CPU: 4, Mem: 1300, Disk: 5000, Est Runtime: 138 SUBMITTED
+        SENT JOBN 62 2034 4 1300 5000 138
+        RCVD SCHD 62 MQ_Cloud_large 1
+        job 62 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+        job 62 on MQ_Cloud_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2054: job 51 on very_very_large 0 COMPLETED
+        job 57 on very_very_large 0 RUNNING
+        SENT JCPL 2054 51 very_very_large 0
+        RCVD REDY
+t 2073: job 28 on large 1 COMPLETED
+        SENT JCPL 2073 28 large 1
+        RCVD REDY
+        job 57 on very_very_large 0 COMPLETED
+        SENT JCPL 2073 57 very_very_large 0
+        RCVD REDY
+t 2101: job 63 -- CPU: 13, Mem: 14300, Disk: 31700, Est Runtime: 243 SUBMITTED
+        SENT JOBN 63 2101 13 14300 31700 243
+        RCVD SCHD 63 very_very_large 1
+        job 63 (running) on very_very_large 1 (active) SCHEDULED
+        job 63 on very_very_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2104: job 19 on MQ_Cloud_large 0 COMPLETED
+        job 20 on MQ_Cloud_large 0 RUNNING
+        SENT JCPL 2104 19 MQ_Cloud_large 0
+        RCVD REDY
+t 2107: job 61 on MQ_Cloud_large 1 COMPLETED
+        SENT JCPL 2107 61 MQ_Cloud_large 1
+        RCVD REDY
+t 2175: job 17 on large 0 COMPLETED
+        SENT JCPL 2175 17 large 0
+        RCVD REDY
+t 2200: job 20 on MQ_Cloud_large 0 COMPLETED
+        job 21 on MQ_Cloud_large 0 RUNNING
+        SENT JCPL 2200 20 MQ_Cloud_large 0
+        RCVD REDY
+t 2220: job 64 -- CPU: 7, Mem: 3400, Disk: 12100, Est Runtime: 21 SUBMITTED
+        SENT JOBN 64 2220 7 3400 12100 21
+        RCVD SCHD 64 large 1
+        job 64 (running) on large 1 (active) SCHEDULED
+        job 64 on large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2249: job 64 on large 1 COMPLETED
+        SENT JCPL 2249 64 large 1
+        RCVD REDY
+t 2293: job 65 -- CPU: 14, Mem: 20100, Disk: 25200, Est Runtime: 243 SUBMITTED
+        SENT JOBN 65 2293 14 20100 25200 243
+        RCVD SCHD 65 large 0
+        job 65 (running) on large 0 (active) SCHEDULED
+        job 65 on large 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2313: job 66 -- CPU: 7, Mem: 1400, Disk: 3500, Est Runtime: 104 SUBMITTED
+        SENT JOBN 66 2313 7 1400 3500 104
+        RCVD SCHD 66 large 1
+        job 66 (running) on large 1 (active) SCHEDULED
+        job 66 on large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2346: job 32 on large 1 COMPLETED
+        SENT JCPL 2346 32 large 1
+        RCVD REDY
+t 2366: job 21 on MQ_Cloud_large 0 COMPLETED
+        job 22 on MQ_Cloud_large 0 RUNNING
+        SENT JCPL 2366 21 MQ_Cloud_large 0
+        RCVD REDY
+t 2388: job 67 -- CPU: 2, Mem: 1100, Disk: 1500, Est Runtime: 225 SUBMITTED
+        SENT JOBN 67 2388 2 1100 1500 225
+        RCVD SCHD 67 MQ_Cloud_large 1
+        job 67 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+        job 67 on MQ_Cloud_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2395: job 68 -- CPU: 2, Mem: 1600, Disk: 800, Est Runtime: 77 SUBMITTED
+        SENT JOBN 68 2395 2 1600 800 77
+        RCVD SCHD 68 MQ_Cloud_large 0
+        job 68 (running) on MQ_Cloud_large 0 (active) SCHEDULED
+        job 68 on MQ_Cloud_large 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2422: job 65 on large 0 COMPLETED
+        SENT JCPL 2422 65 large 0
+        RCVD REDY
+t 2439: job 66 on large 1 COMPLETED
+        SENT JCPL 2439 66 large 1
+        RCVD REDY
+t 2452: job 69 -- CPU: 4, Mem: 600, Disk: 2400, Est Runtime: 9 SUBMITTED
+        SENT JOBN 69 2452 4 600 2400 9
+        RCVD SCHD 69 large 1
+        job 69 (running) on large 1 (active) SCHEDULED
+        job 69 on large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2459: job 69 on large 1 COMPLETED
+        SENT JCPL 2459 69 large 1
+        RCVD REDY
+t 2497: job 70 -- CPU: 3, Mem: 1200, Disk: 1400, Est Runtime: 1932 SUBMITTED
+        SENT JOBN 70 2497 3 1200 1400 1932
+        RCVD SCHD 70 large 1
+        job 70 (running) on large 1 (active) SCHEDULED
+        job 70 on large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2560: job 67 on MQ_Cloud_large 1 COMPLETED
+        SENT JCPL 2560 67 MQ_Cloud_large 1
+        RCVD REDY
+t 2571: job 71 -- CPU: 6, Mem: 4900, Disk: 2100, Est Runtime: 141 SUBMITTED
+        SENT JOBN 71 2571 6 4900 2100 141
+        RCVD SCHD 71 large 1
+        job 71 (running) on large 1 (active) SCHEDULED
+        job 71 on large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2603: job 72 -- CPU: 3, Mem: 800, Disk: 700, Est Runtime: 7 SUBMITTED
+        SENT JOBN 72 2603 3 800 700 7
+        RCVD SCHD 72 MQ_Cloud_large 1
+        job 72 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+        job 72 on MQ_Cloud_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2623: job 73 -- CPU: 4, Mem: 2800, Disk: 6000, Est Runtime: 11 SUBMITTED
+        SENT JOBN 73 2623 4 2800 6000 11
+        RCVD SCHD 73 large 1
+        job 73 (running) on large 1 (active) SCHEDULED
+        job 73 on large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2627: job 16 on small 0 COMPLETED
+        SENT JCPL 2627 16 small 0
+        RCVD REDY
+t 2629: job 74 -- CPU: 2, Mem: 400, Disk: 1100, Est Runtime: 72 SUBMITTED
+        SENT JOBN 74 2629 2 400 1100 72
+        RCVD SCHD 74 small 0
+        job 74 (running) on small 0 (active) SCHEDULED
+        job 74 on small 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2678: job 75 -- CPU: 2, Mem: 1200, Disk: 3400, Est Runtime: 408 SUBMITTED
+        SENT JOBN 75 2678 2 1200 3400 408
+        RCVD SCHD 75 large 1
+        job 75 (running) on large 1 (active) SCHEDULED
+        job 75 on large 1 RUNNING
+        SENT OK
+        RCVD REDY
+        job 76 -- CPU: 2, Mem: 1500, Disk: 400, Est Runtime: 167 SUBMITTED
+        SENT JOBN 76 2678 2 1500 400 167
+        RCVD SCHD 76 large 0
+        job 76 (running) on large 0 (active) SCHEDULED
+        job 76 on large 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2696: job 71 on large 1 COMPLETED
+        SENT JCPL 2696 71 large 1
+        RCVD REDY
+t 2707: job 68 on MQ_Cloud_large 0 COMPLETED
+        SENT JCPL 2707 68 MQ_Cloud_large 0
+        RCVD REDY
+t 2712: job 77 -- CPU: 1, Mem: 1000, Disk: 1900, Est Runtime: 176 SUBMITTED
+        SENT JOBN 77 2712 1 1000 1900 176
+        RCVD SCHD 77 small 1
+        job 77 (running) on small 1 (active) SCHEDULED
+        job 77 on small 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2725: job 72 on MQ_Cloud_large 1 COMPLETED
+        SENT JCPL 2725 72 MQ_Cloud_large 1
+        RCVD REDY
+t 2731: job 78 -- CPU: 6, Mem: 4600, Disk: 9500, Est Runtime: 822 SUBMITTED
+        SENT JOBN 78 2731 6 4600 9500 822
+        RCVD SCHD 78 large 1
+        job 78 (running) on large 1 (active) SCHEDULED
+        job 78 on large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2735: job 79 -- CPU: 1, Mem: 400, Disk: 400, Est Runtime: 115 SUBMITTED
+        SENT JOBN 79 2735 1 400 400 115
+        RCVD SCHD 79 medium 1
+        job 79 (running) on medium 1 (active) SCHEDULED
+        job 79 on medium 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2740: job 80 -- CPU: 6, Mem: 5100, Disk: 10700, Est Runtime: 301 SUBMITTED
+        SENT JOBN 80 2740 6 5100 10700 301
+        RCVD SCHD 80 large 0
+        job 80 (running) on large 0 (active) SCHEDULED
+        job 80 on large 0 RUNNING
+        SENT OK
+        RCVD REDY
+        job 81 -- CPU: 4, Mem: 1800, Disk: 6600, Est Runtime: 6 SUBMITTED
+        SENT JOBN 81 2740 4 1800 6600 6
+        RCVD SCHD 81 large 0
+        job 81 (running) on large 0 (active) SCHEDULED
+        job 81 on large 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2742: job 82 -- CPU: 3, Mem: 2000, Disk: 5600, Est Runtime: 129 SUBMITTED
+        SENT JOBN 82 2742 3 2000 5600 129
+        RCVD SCHD 82 MQ_Cloud_large 1
+        job 82 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+        job 82 on MQ_Cloud_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2762: job 83 -- CPU: 14, Mem: 2400, Disk: 8900, Est Runtime: 165 SUBMITTED
+        SENT JOBN 83 2762 14 2400 8900 165
+        RCVD SCHD 83 very_very_large 1
+        job 83 (running) on very_very_large 1 (active) SCHEDULED
+        job 83 on very_very_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2767: job 76 on large 0 COMPLETED
+        SENT JCPL 2767 76 large 0
+        RCVD REDY
+t 2787: job 84 -- CPU: 1, Mem: 500, Disk: 1000, Est Runtime: 989 SUBMITTED
+        SENT JOBN 84 2787 1 500 1000 989
+        RCVD SCHD 84 MQ_Cloud_large 0
+        job 84 (running) on MQ_Cloud_large 0 (active) SCHEDULED
+        job 84 on MQ_Cloud_large 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2788: job 73 on large 1 COMPLETED
+        SENT JCPL 2788 73 large 1
+        RCVD REDY
+t 2793: job 79 on medium 1 COMPLETED
+        SENT JCPL 2793 79 medium 1
+        RCVD REDY
+t 2804: job 85 -- CPU: 1, Mem: 800, Disk: 500, Est Runtime: 20 SUBMITTED
+        SENT JOBN 85 2804 1 800 500 20
+        RCVD SCHD 85 medium 1
+        job 85 (running) on medium 1 (active) SCHEDULED
+        job 85 on medium 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2824: job 85 on medium 1 COMPLETED
+        SENT JCPL 2824 85 medium 1
+        RCVD REDY
+        job 86 -- CPU: 1, Mem: 800, Disk: 400, Est Runtime: 49 SUBMITTED
+        SENT JOBN 86 2824 1 800 400 49
+        RCVD SCHD 86 medium 1
+        job 86 (running) on medium 1 (active) SCHEDULED
+        job 86 on medium 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2829: job 87 -- CPU: 10, Mem: 3500, Disk: 18700, Est Runtime: 670 SUBMITTED
+        SENT JOBN 87 2829 10 3500 18700 670
+        RCVD SCHD 87 very_very_large 1
+        job 87 (running) on very_very_large 1 (active) SCHEDULED
+        job 87 on very_very_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2838: job 88 -- CPU: 2, Mem: 1600, Disk: 1200, Est Runtime: 50 SUBMITTED
+        SENT JOBN 88 2838 2 1600 1200 50
+        RCVD SCHD 88 large 0
+        job 88 (running) on large 0 (active) SCHEDULED
+        job 88 on large 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2840: job 22 on MQ_Cloud_large 0 COMPLETED
+        SENT JCPL 2840 22 MQ_Cloud_large 0
+        RCVD REDY
+t 2849: job 89 -- CPU: 11, Mem: 22300, Disk: 31200, Est Runtime: 1765 SUBMITTED
+        SENT JOBN 89 2849 11 22300 31200 1765
+        RCVD SCHD 89 very_very_large 1
+        job 89 (running) on very_very_large 1 (active) SCHEDULED
+        job 89 on very_very_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 2850: job 77 on small 1 COMPLETED
+        SENT JCPL 2850 77 small 1
+        RCVD REDY
+t 2861: job 90 -- CPU: 2, Mem: 1400, Disk: 3700, Est Runtime: 1 SUBMITTED
+        SENT JOBN 90 2861 2 1400 3700 1
+        RCVD SCHD 90 MQ_Cloud_large 0
+        job 90 (running) on MQ_Cloud_large 0 (active) SCHEDULED
+        job 90 on MQ_Cloud_large 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2862: job 90 on MQ_Cloud_large 0 COMPLETED
+        SENT JCPL 2862 90 MQ_Cloud_large 0
+        RCVD REDY
+t 2865: job 91 -- CPU: 4, Mem: 400, Disk: 4400, Est Runtime: 1817 SUBMITTED
+        SENT JOBN 91 2865 4 400 4400 1817
+        RCVD SCHD 91 MQ_Cloud_large 0
+        job 91 (running) on MQ_Cloud_large 0 (active) SCHEDULED
+        job 91 on MQ_Cloud_large 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2876: job 82 on MQ_Cloud_large 1 COMPLETED
+        SENT JCPL 2876 82 MQ_Cloud_large 1
+        RCVD REDY
+t 2886: job 92 -- CPU: 8, Mem: 2200, Disk: 12300, Est Runtime: 106 SUBMITTED
+        SENT JOBN 92 2886 8 2200 12300 106
+        RCVD SCHD 92 very_very_large 0
+        job 92 (running) on very_very_large 0 (active) SCHEDULED
+        job 92 on very_very_large 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2891: job 80 on large 0 COMPLETED
+        SENT JCPL 2891 80 large 0
+        RCVD REDY
+t 2905: job 93 -- CPU: 3, Mem: 2400, Disk: 1800, Est Runtime: 91 SUBMITTED
+        SENT JOBN 93 2905 3 2400 1800 91
+        RCVD SCHD 93 MQ_Cloud_large 0
+        job 93 (running) on MQ_Cloud_large 0 (active) SCHEDULED
+        job 93 on MQ_Cloud_large 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2940: job 83 on very_very_large 1 COMPLETED
+        SENT JCPL 2940 83 very_very_large 1
+        RCVD REDY
+t 2941: job 81 on large 0 COMPLETED
+        SENT JCPL 2941 81 large 0
+        RCVD REDY
+t 2956: job 92 on very_very_large 0 COMPLETED
+        SENT JCPL 2956 92 very_very_large 0
+        RCVD REDY
+t 2966: job 94 -- CPU: 10, Mem: 9800, Disk: 25200, Est Runtime: 76 SUBMITTED
+        SENT JOBN 94 2966 10 9800 25200 76
+        RCVD SCHD 94 large 0
+        job 94 (running) on large 0 (active) SCHEDULED
+        job 94 on large 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 2987: job 29 on MQ_Cloud_large 1 COMPLETED
+        SENT JCPL 2987 29 MQ_Cloud_large 1
+        RCVD REDY
+t 2994: job 95 -- CPU: 10, Mem: 2500, Disk: 30100, Est Runtime: 9 SUBMITTED
+        SENT JOBN 95 2994 10 2500 30100 9
+        RCVD SCHD 95 very_very_large 1
+        job 95 (running) on very_very_large 1 (active) SCHEDULED
+        job 95 on very_very_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 3006: job 63 on very_very_large 1 COMPLETED
+        SENT JCPL 3006 63 very_very_large 1
+        RCVD REDY
+        job 96 -- CPU: 2, Mem: 700, Disk: 2400, Est Runtime: 3 SUBMITTED
+        SENT JOBN 96 3006 2 700 2400 3
+        RCVD SCHD 96 MQ_Cloud_large 1
+        job 96 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+        job 96 on MQ_Cloud_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 3008: job 52 on small 1 COMPLETED
+        SENT JCPL 3008 52 small 1
+        RCVD REDY
+t 3020: job 62 on MQ_Cloud_large 1 COMPLETED
+        SENT JCPL 3020 62 MQ_Cloud_large 1
+        RCVD REDY
+t 3034: job 74 on small 0 COMPLETED
+        SENT JCPL 3034 74 small 0
+        RCVD REDY
+t 3046: job 94 on large 0 COMPLETED
+        SENT JCPL 3046 94 large 0
+        RCVD REDY
+t 3053: job 93 on MQ_Cloud_large 0 COMPLETED
+        SENT JCPL 3053 93 MQ_Cloud_large 0
+        RCVD REDY
+t 3062: job 97 -- CPU: 2, Mem: 1400, Disk: 2900, Est Runtime: 10 SUBMITTED
+        SENT JOBN 97 3062 2 1400 2900 10
+        RCVD SCHD 97 small 1
+        job 97 (running) on small 1 (active) SCHEDULED
+        job 97 on small 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 3078: job 88 on large 0 COMPLETED
+        SENT JCPL 3078 88 large 0
+        RCVD REDY
+t 3093: job 96 on MQ_Cloud_large 1 COMPLETED
+        SENT JCPL 3093 96 MQ_Cloud_large 1
+        RCVD REDY
+t 3108: job 98 -- CPU: 4, Mem: 3200, Disk: 3100, Est Runtime: 4955 SUBMITTED
+        SENT JOBN 98 3108 4 3200 3100 4955
+        RCVD SCHD 98 MQ_Cloud_large 1
+        job 98 (running) on MQ_Cloud_large 1 (active) SCHEDULED
+        job 98 on MQ_Cloud_large 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 3129: job 97 on small 1 COMPLETED
+        SENT JCPL 3129 97 small 1
+        RCVD REDY
+t 3152: job 99 -- CPU: 8, Mem: 7400, Disk: 1000, Est Runtime: 14 SUBMITTED
+        SENT JOBN 99 3152 8 7400 1000 14
+        RCVD SCHD 99 large 0
+        job 99 (running) on large 0 (active) SCHEDULED
+        job 99 on large 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 3163: job 99 on large 0 COMPLETED
+        SENT JCPL 3163 99 large 0
+        RCVD REDY
+t 3164: job 95 on very_very_large 1 COMPLETED
+        SENT JCPL 3164 95 very_very_large 1
+        RCVD REDY
+t 3176: job 78 on large 1 COMPLETED
+        SENT JCPL 3176 78 large 1
+        RCVD REDY
+t 3223: job 58 on medium 1 COMPLETED
+        SENT JCPL 3223 58 medium 1
+        RCVD REDY
+t 3367: job 84 on MQ_Cloud_large 0 COMPLETED
+        SENT JCPL 3367 84 MQ_Cloud_large 0
+        RCVD REDY
+t 3370: job 87 on very_very_large 1 COMPLETED
+        SENT JCPL 3370 87 very_very_large 1
+        RCVD REDY
+t 3397: job 86 on medium 1 COMPLETED
+        SENT JCPL 3397 86 medium 1
+        RCVD REDY
+t 3426: job 42 on very_very_large 1 COMPLETED
+        SENT JCPL 3426 42 very_very_large 1
+        RCVD REDY
+t 3744: job 75 on large 1 COMPLETED
+        SENT JCPL 3744 75 large 1
+        RCVD REDY
+t 3941: job 89 on very_very_large 1 COMPLETED
+        SENT JCPL 3941 89 very_very_large 1
+        RCVD REDY
+t 4370: job 91 on MQ_Cloud_large 0 COMPLETED
+        SENT JCPL 4370 91 MQ_Cloud_large 0
+        RCVD REDY
+t 4594: job 23 on medium 0 COMPLETED
+        SENT JCPL 4594 23 medium 0
+        RCVD REDY
+t 4642: job 70 on large 1 COMPLETED
+        SENT JCPL 4642 70 large 1
+        RCVD REDY
+t 6142: job 98 on MQ_Cloud_large 1 COMPLETED
+        SENT JCPL 6142 98 MQ_Cloud_large 1
+        RCVD REDY
+        SENT NONE
+        RCVD QUIT
+        SENT QUIT
+# -------------------------------------------------------------------------------------
+# 2 small servers used with a utilisation of 89.82 at the cost of $0.32
+# 2 medium servers used with a utilisation of 99.44 at the cost of $0.85
+# 2 MQ_Cloud_large servers used with a utilisation of 97.63 at the cost of $1.70
+# 2 large servers used with a utilisation of 90.35 at the cost of $1.63
+# 2 very_very_large servers used with a utilisation of 69.75 at the cost of $5.61
+# ==================================== [ Summary ] ====================================
+# actual simulation end time: 6142, #jobs: 100 (failed 0 times)
+# total #servers used: 10, avg util: 89.40% (ef. usage: 91.20%), total cost: $10.12
+# avg waiting time: 190, avg exec time: 469, avg turnaround time: 659

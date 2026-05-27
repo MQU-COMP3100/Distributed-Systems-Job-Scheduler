@@ -1,0 +1,221 @@
+# ds-sim server 2-Apr, 2026 @ MQ
+# Server-side simulator started with './ds-server -n -c configs/stage2/s2-config02.xml -v brief'
+# Waiting for connection to port 50000 of IP address 127.0.0.1
+RCVD HELO
+SENT OK
+RCVD AUTH chicken
+# Welcome  chicken!
+# The system information can be read from 'ds-system.xml'
+SENT OK
+RCVD REDY
+t 11: job 0 -- CPU: 3, Mem: 1100, Disk: 1800, Est Runtime: 721 SUBMITTED
+      SENT JOBN 0 11 3 1100 1800 721
+      RCVD SCHD 0 highway 0
+      job 0 (waiting) on highway 0 (booting) SCHEDULED
+      SENT OK
+      RCVD REDY
+t 46: job 1 -- CPU: 8, Mem: 2400, Disk: 1000, Est Runtime: 68 SUBMITTED
+      SENT JOBN 1 46 8 2400 1000 68
+      RCVD SCHD 1 silkroad 0
+      job 1 (waiting) on silkroad 0 (booting) SCHEDULED
+      SENT OK
+      RCVD REDY
+t 65: job 2 -- CPU: 3, Mem: 2400, Disk: 2500, Est Runtime: 813 SUBMITTED
+      SENT JOBN 2 65 3 2400 2500 813
+      RCVD SCHD 2 highway 1
+      job 2 (waiting) on highway 1 (booting) SCHEDULED
+      SENT OK
+      RCVD REDY
+t 71: job 0 on highway 0 RUNNING
+t 108: job 3 -- CPU: 1, Mem: 200, Disk: 1200, Est Runtime: 122 SUBMITTED
+       SENT JOBN 3 108 1 200 1200 122
+       RCVD SCHD 3 offload 0
+       job 3 (waiting) on offload 0 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 125: job 2 on highway 1 RUNNING
+t 126: job 1 on silkroad 0 RUNNING
+t 134: job 4 -- CPU: 3, Mem: 300, Disk: 1300, Est Runtime: 3629 SUBMITTED
+       SENT JOBN 4 134 3 300 1300 3629
+       RCVD SCHD 4 silkroad 1
+       job 4 (waiting) on silkroad 1 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 148: job 3 on offload 0 RUNNING
+t 150: job 5 -- CPU: 3, Mem: 3100, Disk: 300, Est Runtime: 149 SUBMITTED
+       SENT JOBN 5 150 3 3100 300 149
+       RCVD SCHD 5 highway 0
+       job 5 (waiting) on highway 0 (active) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 214: job 4 on silkroad 1 RUNNING
+t 307: job 6 -- CPU: 1, Mem: 100, Disk: 300, Est Runtime: 651 SUBMITTED
+       SENT JOBN 6 307 1 100 300 651
+       RCVD SCHD 6 offload 0
+       job 6 (running) on offload 0 (active) SCHEDULED
+       job 6 on offload 0 RUNNING
+       SENT OK
+       RCVD REDY
+t 345: job 3 on offload 0 COMPLETED
+       SENT JCPL 345 3 offload 0
+       RCVD REDY
+t 414: job 7 -- CPU: 2, Mem: 1000, Disk: 1500, Est Runtime: 164 SUBMITTED
+       SENT JOBN 7 414 2 1000 1500 164
+       RCVD SCHD 7 offload 1
+       job 7 (waiting) on offload 1 (booting) SCHEDULED
+       SENT OK
+       RCVD REDY
+t 454: job 7 on offload 1 RUNNING
+t 470: job 8 -- CPU: 4, Mem: 2900, Disk: 2300, Est Runtime: 1313 SUBMITTED
+       SENT JOBN 8 470 4 2900 2300 1313
+       RCVD SCHD 8 silkroad 1
+       job 8 (running) on silkroad 1 (active) SCHEDULED
+       job 8 on silkroad 1 RUNNING
+       SENT OK
+       RCVD REDY
+t 542: job 7 on offload 1 COMPLETED
+       SENT JCPL 542 7 offload 1
+       RCVD REDY
+t 616: job 9 -- CPU: 2, Mem: 3100, Disk: 4700, Est Runtime: 2185 SUBMITTED
+       SENT JOBN 9 616 2 3100 4700 2185
+       RCVD SCHD 9 offload 1
+       job 9 (running) on offload 1 (active) SCHEDULED
+       job 9 on offload 1 RUNNING
+       SENT OK
+       RCVD REDY
+t 626: job 0 on highway 0 COMPLETED
+       job 5 on highway 0 RUNNING
+       SENT JCPL 626 0 highway 0
+       RCVD REDY
+t 628: job 2 on highway 1 COMPLETED
+       SENT JCPL 628 2 highway 1
+       RCVD REDY
+t 685: job 10 -- CPU: 1, Mem: 800, Disk: 100, Est Runtime: 454 SUBMITTED
+       SENT JOBN 10 685 1 800 100 454
+       RCVD SCHD 10 offload 0
+       job 10 (running) on offload 0 (active) SCHEDULED
+       job 10 on offload 0 RUNNING
+       SENT OK
+       RCVD REDY
+t 725: job 11 -- CPU: 1, Mem: 1000, Disk: 2000, Est Runtime: 5365 SUBMITTED
+       SENT JOBN 11 725 1 1000 2000 5365
+       RCVD SCHD 11 highway 0
+       job 11 (running) on highway 0 (active) SCHEDULED
+       job 11 on highway 0 RUNNING
+       SENT OK
+       RCVD REDY
+t 737: job 12 -- CPU: 1, Mem: 500, Disk: 1500, Est Runtime: 408 SUBMITTED
+       SENT JOBN 12 737 1 500 1500 408
+       RCVD SCHD 12 highway 1
+       job 12 (running) on highway 1 (active) SCHEDULED
+       job 12 on highway 1 RUNNING
+       SENT OK
+       RCVD REDY
+t 753: job 6 on offload 0 COMPLETED
+       SENT JCPL 753 6 offload 0
+       RCVD REDY
+t 754: job 1 on silkroad 0 COMPLETED
+       SENT JCPL 754 1 silkroad 0
+       RCVD REDY
+t 766: job 13 -- CPU: 3, Mem: 3100, Disk: 1800, Est Runtime: 208 SUBMITTED
+       SENT JOBN 13 766 3 3100 1800 208
+       RCVD SCHD 13 highway 1
+       job 13 (running) on highway 1 (active) SCHEDULED
+       job 13 on highway 1 RUNNING
+       SENT OK
+       RCVD REDY
+t 774: job 14 -- CPU: 3, Mem: 3200, Disk: 3100, Est Runtime: 1396 SUBMITTED
+       SENT JOBN 14 774 3 3200 3100 1396
+       RCVD SCHD 14 silkroad 0
+       job 14 (running) on silkroad 0 (active) SCHEDULED
+       job 14 on silkroad 0 RUNNING
+       SENT OK
+       RCVD REDY
+t 782: job 15 -- CPU: 2, Mem: 900, Disk: 1800, Est Runtime: 552 SUBMITTED
+       SENT JOBN 15 782 2 900 1800 552
+       RCVD SCHD 15 silkroad 0
+       job 15 (running) on silkroad 0 (active) SCHEDULED
+       job 15 on silkroad 0 RUNNING
+       SENT OK
+       RCVD REDY
+t 876: job 5 on highway 0 COMPLETED
+       SENT JCPL 876 5 highway 0
+       RCVD REDY
+t 990: job 12 on highway 1 COMPLETED
+       SENT JCPL 990 12 highway 1
+       RCVD REDY
+t 1050: job 16 -- CPU: 2, Mem: 1400, Disk: 3500, Est Runtime: 298 SUBMITTED
+        SENT JOBN 16 1050 2 1400 3500 298
+        RCVD SCHD 16 highway 0
+        job 16 (running) on highway 0 (active) SCHEDULED
+        job 16 on highway 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 1213: job 13 on highway 1 COMPLETED
+        SENT JCPL 1213 13 highway 1
+        RCVD REDY
+t 1230: job 17 -- CPU: 3, Mem: 2200, Disk: 2200, Est Runtime: 735 SUBMITTED
+        SENT JOBN 17 1230 3 2200 2200 735
+        RCVD SCHD 17 highway 1
+        job 17 (running) on highway 1 (active) SCHEDULED
+        job 17 on highway 1 RUNNING
+        SENT OK
+        RCVD REDY
+t 1317: job 16 on highway 0 COMPLETED
+        SENT JCPL 1317 16 highway 0
+        RCVD REDY
+t 1357: job 18 -- CPU: 1, Mem: 500, Disk: 500, Est Runtime: 577 SUBMITTED
+        SENT JOBN 18 1357 1 500 500 577
+        RCVD SCHD 18 offload 0
+        job 18 (running) on offload 0 (active) SCHEDULED
+        job 18 on offload 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 1402: job 8 on silkroad 1 COMPLETED
+        SENT JCPL 1402 8 silkroad 1
+        RCVD REDY
+t 1438: job 19 -- CPU: 3, Mem: 700, Disk: 1300, Est Runtime: 575 SUBMITTED
+        SENT JOBN 19 1438 3 700 1300 575
+        RCVD SCHD 19 highway 0
+        job 19 (running) on highway 0 (active) SCHEDULED
+        job 19 on highway 0 RUNNING
+        SENT OK
+        RCVD REDY
+t 1676: job 18 on offload 0 COMPLETED
+        SENT JCPL 1676 18 offload 0
+        RCVD REDY
+t 1730: job 19 on highway 0 COMPLETED
+        SENT JCPL 1730 19 highway 0
+        RCVD REDY
+t 1904: job 10 on offload 0 COMPLETED
+        SENT JCPL 1904 10 offload 0
+        RCVD REDY
+t 1927: job 17 on highway 1 COMPLETED
+        SENT JCPL 1927 17 highway 1
+        RCVD REDY
+t 2288: job 9 on offload 1 COMPLETED
+        SENT JCPL 2288 9 offload 1
+        RCVD REDY
+t 2328: job 15 on silkroad 0 COMPLETED
+        SENT JCPL 2328 15 silkroad 0
+        RCVD REDY
+t 2407: job 14 on silkroad 0 COMPLETED
+        SENT JCPL 2407 14 silkroad 0
+        RCVD REDY
+t 3832: job 4 on silkroad 1 COMPLETED
+        SENT JCPL 3832 4 silkroad 1
+        RCVD REDY
+t 9540: job 11 on highway 0 COMPLETED
+        SENT JCPL 9540 11 highway 0
+        RCVD REDY
+        SENT NONE
+        RCVD QUIT
+        SENT QUIT
+# -------------------------------------------------------------------------------------
+# 2 offload servers used with a utilisation of 97.98 at the cost of $0.20
+# 2 highway servers used with a utilisation of 96.50 at the cost of $1.25
+# 2 silkroad servers used with a utilisation of 99.56 at the cost of $1.31
+# ==================================== [ Summary ] ====================================
+# actual simulation end time: 9540, #jobs: 20 (failed 0 times)
+# total #servers used: 6, avg util: 98.02% (ef. usage: 98.94%), total cost: $2.76
+# avg waiting time: 41, avg exec time: 1218, avg turnaround time: 1259
