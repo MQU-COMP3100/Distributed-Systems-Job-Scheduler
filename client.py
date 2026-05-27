@@ -86,11 +86,34 @@ def get_servers(client, query, cores, memory, disk):
 
 
 def choose_server(servers, specs):
-    def spec(s, key, fb): return specs.get(s["type"], {}).get(key, fb)
-    def full_cores(s): return spec(s, "cores", s["avail_cores"])
+    def spec(s, key, fb):
+        return specs.get(s["type"], {}).get(key, fb)
 
-    # No queue first, then biggest cores, then lowest id
-    return min(servers, key=lambda s: (s["waiting"], -full_cores(s), s["id"]))
+    def full_cores(s):
+        return spec(s, "cores", s["avail_cores"])
+
+    return min(
+        servers,
+        key=lambda s: (
+            s["waiting"],
+            -full_cores(s),
+            -s["avail_cores"],
+            -s["avail_memory"],
+            -s["avail_disk"],
+            s["id"],
+        ),
+    )
+    
+
+    return min(
+        servers,
+        key=lambda s: (
+            s["waiting"],
+            state_rank.get(s["state"], 4),
+            -full_cores(s),
+            s["id"],
+        ),
+    )
 
 
 def main():
