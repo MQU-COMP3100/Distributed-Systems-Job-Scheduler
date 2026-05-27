@@ -105,15 +105,7 @@ def choose_server(servers, specs):
     )
     
 
-    return min(
-        servers,
-        key=lambda s: (
-            s["waiting"],
-            state_rank.get(s["state"], 4),
-            -full_cores(s),
-            s["id"],
-        ),
-    )
+   
 
 
 def main():
