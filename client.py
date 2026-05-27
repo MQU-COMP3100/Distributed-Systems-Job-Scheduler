@@ -104,10 +104,6 @@ def choose_server(servers, specs):
         ),
     )
     
-
-   
-
-
 def main():
     client = DSClient()
 
