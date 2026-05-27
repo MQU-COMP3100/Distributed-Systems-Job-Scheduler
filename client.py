@@ -54,16 +54,16 @@ def load_specs():
 
 
 def parse_server(line):
-    parts = line.split()
+    p = line.split()
     return {
-        "type": parts[0],
-        "id": int(parts[1]),
-        "state": parts[2],
-        "avail_cores": int(parts[4]),
-        "avail_memory": int(parts[5]),
-        "avail_disk": int(parts[6]),
-        "waiting": int(parts[7]),
-        "running": int(parts[8]),
+        "type": p[0],
+        "id": int(p[1]),
+        "state": p[2],
+        "avail_cores": int(p[4]),
+        "avail_memory": int(p[5]),
+        "avail_disk": int(p[6]),
+        "waiting": int(p[7]),
+        "running": int(p[8]),
     }
 
 
