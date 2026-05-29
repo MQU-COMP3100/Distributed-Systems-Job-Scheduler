@@ -14,6 +14,7 @@ DEFAULT_BOOT_TIME = 60
 DEFAULT_HOURLY_RATE = 1.0
 DEFAULT_RESOURCE = 1
 
+
 class DSClient:
     def __init__(self):
         self.sock = socket.socket()
@@ -24,29 +25,29 @@ class DSClient:
         self.sock.sendall((message + "\n").encode("utf-8"))
 
     def receive(self):
-        msg = self.reader.readline()
-        if not msg:
+        message = self.reader.readline()
+        if not message:
             raise RuntimeError("Server closed connection")
-        return msg.strip()
+        return message.strip()
 
     def close(self):
         self.reader.close()
         self.sock.close()
 
 
-def load_specs():
+def load_server_specs():
     for _ in range(SPEC_LOAD_RETRIES):
         if os.path.exists("ds-system.xml"):
             root = ET.parse("ds-system.xml").getroot()
             specs = {}
-            for server in root.findall(".//server"):
-                specs[server.attrib["type"]] = {
-                    "limit": int(server.attrib.get("limit", DEFAULT_SERVER_LIMIT)),
-                    "boot": int(server.attrib.get("bootupTime", DEFAULT_BOOT_TIME)),
-                    "rate": float(server.attrib.get("hourlyRate", DEFAULT_HOURLY_RATE)),
-                    "cores": int(server.attrib.get("cores", DEFAULT_RESOURCE)),
-                    "memory": int(server.attrib.get("memory", DEFAULT_RESOURCE)),
-                    "disk": int(server.attrib.get("disk", DEFAULT_RESOURCE)),
+            for selected_server in root.findall(".//server"):
+                specs[selected_server.attrib["type"]] = {
+                    "limit": int(selected_server.attrib.get("limit", DEFAULT_SERVER_LIMIT)),
+                    "boot": int(selected_server.attrib.get("bootupTime", DEFAULT_BOOT_TIME)),
+                    "rate": float(selected_server.attrib.get("hourlyRate", DEFAULT_HOURLY_RATE)),
+                    "cores": int(selected_server.attrib.get("cores", DEFAULT_RESOURCE)),
+                    "memory": int(selected_server.attrib.get("memory", DEFAULT_RESOURCE)),
+                    "disk": int(selected_server.attrib.get("disk", DEFAULT_RESOURCE)),
                 }
             return specs
         time.sleep(SPEC_LOAD_DELAY)
@@ -69,41 +70,42 @@ def parse_server(line):
 
 def get_servers(client, query, cores, memory, disk):
     client.send(f"GETS {query} {cores} {memory} {disk}")
-    resp = client.receive()
-    data = resp.split()
+    response = client.receive()
+    data = response.split()
 
     if data[0] == "NONE" or int(data[1]) == 0:
         client.send("OK")
         client.receive()
         return []
 
-    count = int(data[1])
+    server_count = int(data[1])
     client.send("OK")
-    servers = [parse_server(client.receive()) for _ in range(count)]
+    servers = [parse_server(client.receive()) for _ in range(server_count)]
     client.send("OK")
     client.receive()
     return servers
 
 
-def choose_server(servers, specs):
-    def spec(s, key, fb):
-        return specs.get(s["type"], {}).get(key, fb)
+def choose_best_server(servers, specs):
+    def server_specs(server, key, fallback_value):
+        return specs.get(server["type"], {}).get(key, fallback_value)
 
-    def full_cores(s):
-        return spec(s, "cores", s["avail_cores"])
+    def total_server_cores(server):
+        return server_specs(server, "cores", server["avail_cores"])
 
     return min(
         servers,
-        key=lambda s: (
-            s["waiting"],
-            -full_cores(s),
-            -s["avail_cores"],
-            -s["avail_memory"],
-            -s["avail_disk"],
-            s["id"],
+        key=lambda server: (
+            server["waiting"],
+            -total_server_cores(server),
+            -server["avail_cores"],
+            -server["avail_memory"],
+            -server["avail_disk"],
+            server["id"],
         ),
     )
-    
+
+
 def main():
     client = DSClient()
 
@@ -113,42 +115,47 @@ def main():
     client.send(f"AUTH {AUTH_NAME}")
     client.receive()
 
-    specs = load_specs()
+    specs = load_server_specs()
 
     while True:
         client.send("REDY")
-        msg = client.receive()
+        message = client.receive()
 
-        if msg == "NONE":
+        if message == "NONE":
             break
 
-        parts = msg.split()
+        message_fields = message.split()
 
-        if parts[0] in ("JOBN", "JOBP"):
+        if message_fields[0] in ("JOBN", "JOBP"):
             job = {
-                "id": int(parts[1]),
-                "submit": int(parts[2]),
-                "cores": int(parts[3]),
-                "memory": int(parts[4]),
-                "disk": int(parts[5]),
-                "runtime": int(parts[6]),
+                "id": int(message_fields[1]),
+                "submit": int(message_fields[2]),
+                "cores": int(message_fields[3]),
+                "memory": int(message_fields[4]),
+                "disk": int(message_fields[5]),
+                "runtime": int(message_fields[6]),
             }
 
-            servers = get_servers(client, "Avail", job["cores"], job["memory"], job["disk"])
+            servers = get_servers(
+                client, "Avail", job["cores"], job["memory"], job["disk"]
+                )
 
             if not servers:
-                servers = get_servers(client, "Capable", job["cores"], job["memory"], job["disk"])
-                server = servers[0]
+                servers = get_servers(
+                    client, "Capable", job["cores"], job["memory"], job["disk"]
+                    )
+                selected_server = servers[0]
             else:
-                server = choose_server(servers, specs)
+                selected_server = choose_best_server(servers, specs)
 
-            client.send(f"SCHD {job['id']} {server['type']} {server['id']}")
+            client.send(
+                f"SCHD {job['id']} {selected_server['type']} {selected_server['id']}"
+                )
             client.receive()
 
     client.send("QUIT")
     client.receive()
     client.close()
-
 
 if __name__ == "__main__":
     main()
