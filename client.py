@@ -4,53 +4,71 @@ import socket
 import time
 import xml.etree.ElementTree as ET
 
+# basic client setup stuff
 HOST = "localhost"
 PORT = 50000
 AUTH_NAME = "chicken"
+
+# retry settings for loading the xml specs
 SPEC_LOAD_RETRIES = 20
 SPEC_LOAD_DELAY = 0.1
+
+# fallback values in case xml doesnt load properly
 DEFAULT_SERVER_LIMIT = 1
 DEFAULT_BOOT_TIME = 60
 DEFAULT_HOURLY_RATE = 1.0
 DEFAULT_RESOURCE = 1
 
-
 class DSClient:
     def __init__(self):
+
+        # open socket connection to ds-server
         self.sock = socket.socket()
         self.sock.connect((HOST, PORT))
         self.reader = self.sock.makefile("r", encoding="utf-8", newline="\n")
 
     def send(self, message):
+
+        # send message with newline cause server expects that
         self.sock.sendall((message + "\n").encode("utf-8"))
 
     def receive(self):
-        message = self.reader.readline()
-        if not message:
+
+        # read one response line from server
+        msg = self.reader.readline()
+        if not msg:
             raise RuntimeError("Server closed connection")
-        return message.strip()
+        return msg.strip()
 
     def close(self):
+
+         # close everything nicely at the end
         self.reader.close()
         self.sock.close()
 
 
-def load_server_specs():
+def load_specs():
+
+    # try loading server specs from ds-system.xml
     for _ in range(SPEC_LOAD_RETRIES):
         if os.path.exists("ds-system.xml"):
             root = ET.parse("ds-system.xml").getroot()
             specs = {}
-            for selected_server in root.findall(".//server"):
-                specs[selected_server.attrib["type"]] = {
-                    "limit": int(selected_server.attrib.get("limit", DEFAULT_SERVER_LIMIT)),
-                    "boot": int(selected_server.attrib.get("bootupTime", DEFAULT_BOOT_TIME)),
-                    "rate": float(selected_server.attrib.get("hourlyRate", DEFAULT_HOURLY_RATE)),
-                    "cores": int(selected_server.attrib.get("cores", DEFAULT_RESOURCE)),
-                    "memory": int(selected_server.attrib.get("memory", DEFAULT_RESOURCE)),
-                    "disk": int(selected_server.attrib.get("disk", DEFAULT_RESOURCE)),
+
+            # store useful server info by server type
+            for server in root.findall(".//server"):
+                specs[server.attrib["type"]] = {
+                    "limit": int(server.attrib.get("limit", DEFAULT_SERVER_LIMIT)),
+                    "boot": int(server.attrib.get("bootupTime", DEFAULT_BOOT_TIME)),
+                    "rate": float(server.attrib.get("hourlyRate", DEFAULT_HOURLY_RATE)),
+                    "cores": int(server.attrib.get("cores", DEFAULT_RESOURCE)),
+                    "memory": int(server.attrib.get("memory", DEFAULT_RESOURCE)),
+                    "disk": int(server.attrib.get("disk", DEFAULT_RESOURCE)),
                 }
             return specs
         time.sleep(SPEC_LOAD_DELAY)
+
+        # if xml never loads just return empty specs
     return {}
 
 
@@ -69,93 +87,118 @@ def parse_server(line):
 
 
 def get_servers(client, query, cores, memory, disk):
-    client.send(f"GETS {query} {cores} {memory} {disk}")
-    response = client.receive()
-    data = response.split()
 
+    # ask server for either Avail or Capable servers
+    client.send(f"GETS {query} {cores} {memory} {disk}")
+    resp = client.receive()
+    data = resp.split()
+
+    # no matching servers
     if data[0] == "NONE" or int(data[1]) == 0:
         client.send("OK")
         client.receive()
         return []
 
-    server_count = int(data[1])
+    count = int(data[1])
+
+    # first OK says ready to receive server list
     client.send("OK")
-    servers = [parse_server(client.receive()) for _ in range(server_count)]
+    servers = [parse_server(client.receive()) for _ in range(count)]
+
+    # second OK tells server we got the list
     client.send("OK")
     client.receive()
     return servers
 
 
-def choose_best_server(servers, specs):
-    def server_specs(server, key, fallback_value):
-        return specs.get(server["type"], {}).get(key, fallback_value)
+def choose_server(servers, specs):
 
-    def total_server_cores(server):
-        return server_specs(server, "cores", server["avail_cores"])
+    # helper to get spec values, or use fallback if missing
+    def spec(s, key, fb):
+        return specs.get(s["type"], {}).get(key, fb)
 
+    def full_cores(s):
+        return spec(s, "cores", s["avail_cores"])
+
+    # pick server with:
+    # 1. least waiting jobs
+    # 2. biggest total server size
+    # 3. biggest currently free resources
+    # 4. lowest id as tie breaker
     return min(
         servers,
-        key=lambda server: (
-            server["waiting"],
-            -total_server_cores(server),
-            -server["avail_cores"],
-            -server["avail_memory"],
-            -server["avail_disk"],
-            server["id"],
+        key=lambda s: (
+            s["waiting"],
+            -full_cores(s),
+            -s["avail_cores"],
+            -s["avail_memory"],
+            -s["avail_disk"],
+            s["id"],
         ),
     )
+    
+
+   
 
 
 def main():
     client = DSClient()
-
+    
+    # standard handshake
     client.send("HELO")
     client.receive()
 
     client.send(f"AUTH {AUTH_NAME}")
     client.receive()
 
-    specs = load_server_specs()
+    # load xml server specs once at the start
+    specs = load_specs()
 
     while True:
-        client.send("REDY")
-        message = client.receive()
 
-        if message == "NONE":
+        # ask for next job
+        client.send("REDY")
+        msg = client.receive()
+
+        # no more jobs left
+        if msg == "NONE":
             break
 
-        message_fields = message.split()
+        parts = msg.split()
 
-        if message_fields[0] in ("JOBN", "JOBP"):
+        # only schedule actual job messages
+        if parts[0] in ("JOBN", "JOBP"):
             job = {
-                "id": int(message_fields[1]),
-                "submit": int(message_fields[2]),
-                "cores": int(message_fields[3]),
-                "memory": int(message_fields[4]),
-                "disk": int(message_fields[5]),
-                "runtime": int(message_fields[6]),
+                "id": int(parts[1]),
+                "submit": int(parts[2]),
+                "cores": int(parts[3]),
+                "memory": int(parts[4]),
+                "disk": int(parts[5]),
+                "runtime": int(parts[6]),
             }
 
-            servers = get_servers(
-                client, "Avail", job["cores"], job["memory"], job["disk"]
-                )
+            # first try servers that can run it right now
+            servers = get_servers(client, "Avail", job["cores"], job["memory"], job["disk"])
 
             if not servers:
-                servers = get_servers(
-                    client, "Capable", job["cores"], job["memory"], job["disk"]
-                    )
-                selected_server = servers[0]
-            else:
-                selected_server = choose_best_server(servers, specs)
 
-            client.send(
-                f"SCHD {job['id']} {selected_server['type']} {selected_server['id']}"
-                )
+                # if none are free, just grab any capable server
+                servers = get_servers(client, "Capable", job["cores"], job["memory"], job["disk"])
+                server = servers[0]
+            else:
+
+                # if there are available servers, choose the better one
+                server = choose_server(servers, specs)
+
+            # send chosen server back to scheduler
+            client.send(f"SCHD {job['id']} {server['type']} {server['id']}")
             client.receive()
 
+    # clean exit
     client.send("QUIT")
     client.receive()
     client.close()
+
 
 if __name__ == "__main__":
     main()
