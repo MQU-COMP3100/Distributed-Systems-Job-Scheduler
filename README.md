@@ -1,7 +1,7 @@
 # COMP3100 Assignment 2 Scheduler
 
 This repository contains the Python client-side scheduler for COMP3100 Assignment 2.
-The implemented algorithm is AQLCF, an available-first lightweight capacity heuristic.
+The implemented scheduler is a capacity-aware variant of FAFC. It first looks for currently available servers, then applies tie-breaking based on queue length, server capacity, and available resources before falling back to the first capable server.
 
 ## IMPORTANT INFO
 After creating the codespace, please execute 
