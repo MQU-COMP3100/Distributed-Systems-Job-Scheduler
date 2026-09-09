@@ -2,7 +2,63 @@
 
 A custom Python client-side job scheduling engine built for distributed system simulations (`ds-sim`). The scheduler optimises task allocation across server clusters by evaluating real-time server availability, resource capacities, dynamic queue lengths, and hardware constraints.
 
-Evaluated against standard baseline algorithms (FCFS, LRR, SJF), this algorithm reduced average job turnaround times by **99%+** in high-throughput simulated server workloads.
+Evaluated against standard baseline algorithms (ATL, FF, BF, FC, FAFC), this algorithm reduced average job turnaround times by **99%+** in high-throughput simulated server workloads.
+
+## Results
+
+![Results table](diagrams/Results%20Table.PNG)
+
+### Example scheduling behaviour
+ 
+Generated directly from `ds-sim` simulation logs (`stage2 config 2`) — jobs distributed across `highway`, `offload`, and `silkroad` server instances:
+
+```mermaid
+gantt
+    title ds-sim Job Scheduling Gantt Chart
+    dateFormat X
+    axisFormat %s
+ 
+    section highway 0
+    Job 0 Waiting: crit, 11, 71
+    Job 0: 71, 626
+    Job 5 Waiting: crit, 150, 626
+    Job 5: 626, 876
+    Job 11: 725, 9540
+    Job 16: 1050, 1317
+    Job 19: 1438, 1730
+ 
+    section highway 1
+    Job 2 Waiting: crit, 65, 125
+    Job 2: 125, 628
+    Job 12: 737, 990
+    Job 13: 766, 1213
+    Job 17: 1230, 1927
+ 
+    section offload 0
+    Job 3 Waiting: crit, 108, 148
+    Job 3: 148, 345
+    Job 6: 307, 753
+    Job 10: 685, 1904
+    Job 18: 1357, 1676
+ 
+    section offload 1
+    Job 7 Waiting: crit, 414, 454
+    Job 7: 454, 542
+    Job 9: 616, 2288
+ 
+    section silkroad 0
+    Job 1 Waiting: crit, 46, 126
+    Job 1: 126, 754
+    Job 14: 774, 2407
+    Job 15: 782, 2328
+ 
+    section silkroad 1
+    Job 4 Waiting: crit, 134, 214
+    Job 4: 214, 3832
+    Job 8: 470, 1402
+```
+ 
+Red bars show jobs waiting for a server to become available; grey bars show active execution. Additional Gantt charts for other test configurations (including larger-scale runs) are available in [`/diagrams`](diagrams).
 
 ## Scheduling Algorithm Logic
 
